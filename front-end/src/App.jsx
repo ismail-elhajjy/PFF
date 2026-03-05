@@ -1,11 +1,11 @@
-
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
     <>
-    <h1> App Page</h1>
+      <Contact />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
