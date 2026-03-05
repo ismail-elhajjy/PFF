@@ -26,19 +26,16 @@ function Contact() {
         formData,
       );
       if (response.status === 201) {
-        // 2. تعويض الـ alert بميساج نجاح احترافي
         setStatus({
           type: "success",
           msg: "Thank you! Your message has been sent successfully.",
         });
         setFormData({ fullname: "", email: "", message: "" });
 
-        // الميساج كيختفي بوحدو مورا 5 ثواني
         setTimeout(() => setStatus({ type: "", msg: "" }), 5000);
       }
     } catch (error) {
       console.error("Error:", error);
-      // 3. تعويض الـ alert بميساج خطأ احترافي
       setStatus({
         type: "error",
         msg: "Connection error. Please try again later.",
