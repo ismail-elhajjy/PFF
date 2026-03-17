@@ -1,16 +1,24 @@
 import Contact from "./Pages/Contact";
-import Footer from "./Components/Footer.jsx";
+// import Footer from "./Components/Footer.jsx";
 import { BrowserRouter } from "react-router-dom";
+import Login from "./Pages/Login.jsx";
+import { Route, Routes } from "react-router-dom";
+// import Register from "./Pages/Register.jsx";
 
 function App() {
   return (
-    <>
-      {/* <Contact /> */}
-      <BrowserRouter>
-      <Footer />
+    <BrowserRouter>
+      <Routes>
+       
+        <Route path="/" element={<Login />} />
+        
+       
+        <Route path="/contact" element={<Contact />} />
+        
       
-      </BrowserRouter>
-    </>
+        {/* <Route path="/register" element={<Register />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
