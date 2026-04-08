@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Login.css";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -23,7 +24,7 @@ const Login = () => {
       });
 
       localStorage.setItem("token", response.data.token);
-      navigate("/contact");
+      navigate("/");
     } catch (err) {
       if (!err.response) {
         setError(" Problem connecting to the server. Please try again later.");
@@ -127,8 +128,8 @@ const Login = () => {
           {/******************/}
           {/* Back Home Link */}
           {/******************/}
-          <Link to="/home" className="back-home">
-            ← Back to Home
+          <Link to="/" className="back-home">
+            <ArrowLeft size={20} strokeWidth={3}/><span> Back to Home</span>
           </Link>
         </div>
       </div>

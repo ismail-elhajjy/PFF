@@ -1,5 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter,Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer.jsx";
 import Contact from "./Pages/Contact";
 import Register from "./Pages/Register.jsx";

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
+import { ArrowLeft } from "lucide-react";
 
 
 function Register() {
@@ -49,9 +50,9 @@ function Register() {
 
   return (
     <div className="main-container">
-      {/**************/}
-      {/* Left Panel */}
-      {/**************/}
+      {/******************/}
+      {/*   Left Panel   */}
+      {/******************/}
       <div className="left-panel">
         <div className="box-logo">
           <img src={MainLogo} alt="AtlasAds Logo" className="main-logo" />
@@ -66,9 +67,9 @@ function Register() {
         <div className="footer">© 2026 AtlasAds. All rights reserved.</div>
       </div>
 
-      {/***************/}
-      {/* Right Panel */}
-      {/***************/}
+      {/*******************/}
+      {/*   Right Panel   */}
+      {/*******************/}
       <div className="right-panel">
         <div className="form-container">
           <h2>Sign Up</h2>
@@ -145,8 +146,8 @@ function Register() {
                 Login here
               </span>
             </p>
-            <Link to="/home" className="back-home">
-              ← Back to Home
+            <Link to="/" className="back-home">
+              <ArrowLeft size={20} strokeWidth={3}/><span> Back to Home</span>
             </Link>
           </div>
         </div>

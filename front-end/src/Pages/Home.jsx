@@ -22,6 +22,9 @@ const scrollToCities = () => {
 
   return (
     <div className="home-page">
+          {/* ============================= */}
+          {/*         Header Section        */}
+          {/* ============================= */}
       <section className="hero-section">
         <div className="hero-container">
           {/* ============================= */}
@@ -42,8 +45,6 @@ const scrollToCities = () => {
               <Link to="/billboards" className="btn-primary">
                 Reserve a Panel
               </Link>
-
-              {/* ba9i khasni n9ad had button li ghadi tdini l Featured Cities 3abra scroll */}
               <button className="btn-secondary" onClick={scrollToCities}>Explore Billboards</button>
             </div>
           </div>
@@ -64,8 +65,7 @@ const scrollToCities = () => {
             {/* ========================= */}
             <div className="floating-location">
               <div className="pin-icon">
-                {" "}
-                <MapPin size={28} strokeWidth={2} />{" "}
+                <MapPin size={28} strokeWidth={2} /> 
               </div>
               <div className="info-text">
                 <strong>Boulevard Mohammed V</strong>

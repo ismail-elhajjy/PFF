@@ -197,6 +197,7 @@ body{
 
   animation: floatAnimation 5s linear infinite;
 }
+
 .pin-icon {
   font-size: 20px;
   background: #ffffff;
@@ -232,9 +233,9 @@ body{
   }
 }
 
-/********************/
-/*      Cards      */
-/*******************/
+/*************************/
+/*     Feature Cards     */
+/*************************/
 .features-section {
   padding: 80px 24px;
   background-color: #eff1f4;
@@ -305,9 +306,9 @@ body{
   color: #ea580c;
 }
 
-/************************/
-/*      Responsive      */
-/************************/
+/*******************************************/
+/*  Responsive for the first two sections  */
+/*******************************************/
 
 @media (max-width: 992px) {
   .hero-container {
@@ -328,6 +329,11 @@ body{
     margin-top: 40px;
   }
 }
+
+
+/************************/
+/*    Cities Section    */
+/************************/
 
 .cities-section {
   padding: 70px 5%;
@@ -430,6 +436,9 @@ body{
   display: none;
 }
 
+/*************************************/
+/* Responsive for the cities section */
+/*************************************/
 @media (max-width: 1024px) {
   .cities-container {
     grid-template-columns: repeat(2, 1fr);
@@ -452,7 +461,6 @@ body{
     display: none;
   }
 }
-
 
 @media (max-width: 600px) {
   .cities-container {

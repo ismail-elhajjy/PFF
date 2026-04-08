@@ -15,7 +15,7 @@ function Footer() {
           <Link to="/" className="footer-logo">
             <img src={logo} alt="AtlasAds Logo" />
           </Link>
-          <p>The best advertising solutions in Casablanca to grow your brand.</p>
+          <p>The best advertising solutions in Morocco to grow your brand.</p>
         </div>
 
         {/*****************************/}
@@ -25,7 +25,7 @@ function Footer() {
           <h3>Quick Links</h3>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/">Services</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
