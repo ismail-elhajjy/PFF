@@ -257,4 +257,7 @@
   .login-card {
     max-width: 100%;
   }
+  .form-group{
+   padding: 0 20px 0 0;
+  }
 }

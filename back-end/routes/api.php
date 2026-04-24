@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BillboardController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
@@ -19,3 +20,6 @@ Route::post('/login', [AuthController::class, 'login']);
 
 // For Register Page
 Route::post('/register', [RegisterController::class, 'register']);
+
+// For billbords Page
+Route::get('/billboards', [BillboardController::class, 'billboards']);

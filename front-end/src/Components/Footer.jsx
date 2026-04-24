@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css'; 
 import logo from '../assets/PFF-logo-withoutBg2.png'; 
+import {MapPin,Phone,Mail} from 'lucide-react';
 
 function Footer() {
   return (
@@ -25,8 +26,8 @@ function Footer() {
           <h3>Quick Links</h3>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/">Services</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/login">Login</Link></li>
           </ul>
         </div>
 
@@ -35,9 +36,9 @@ function Footer() {
         {/*******************************/}
         <div className="footer-section">
           <h3>Contact</h3>
-          <p>📍 Dar Bouazza, Casablanca</p>
-          <p>📞 +212 7 09 08 32 72</p>
-          <p>✉️ support@atlasads.ma</p>
+          <p><MapPin color='#ff6600' size={18} className='icons'/> Dar Bouazza, Casablanca</p>
+          <p><Phone  color='#ff6600' size={18} className='icons'/> +212 7 09 08 32 72</p>
+          <p><Mail   color='#ff6600' size={18} className='icons'/> support@atlasads.ma</p>
         </div>
 
       </div>

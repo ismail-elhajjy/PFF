@@ -10,9 +10,9 @@ import EssaouiraImg from "../assets/essaouira.jpg";
 const CitiesData = [
   { cityName: "Casablanca",  photo: casaImg,        status: "High Demand"   },
   { cityName: "Rabat",       photo: rabatImg,       status: "High Demand"   },
-  { cityName: "Marrakech",   photo: marrakechImg,   status: "Available Now" },
+  { cityName: "Marrakech",   photo: marrakechImg,   status: "High Demand" },
   { cityName: "Tanger",      photo: tangerImg,      status: "Available Now" },
-  { cityName: "Agadir",      photo: agadirImg,      status: "Limited Spots" },
+  { cityName: "Agadir",      photo: agadirImg,      status: "Available Now" },
   { cityName: "Fes",         photo: fesImg,         status: "Limited Spots" },
   { cityName: "Chefchaouen", photo: chefchaouenImg, status: "Limited Spots" },
   { cityName: "Essaouira",   photo: EssaouiraImg,   status: "Limited Spots" },

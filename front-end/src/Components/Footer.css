@@ -76,3 +76,8 @@
   font-size: 0.9rem;
   color: #888;
 }
+.icons{
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+}

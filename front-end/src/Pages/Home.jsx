@@ -1,6 +1,6 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
-import { useRef } from 'react';
+import { useRef } from "react";
 import CitiesData from "../Data/CitiesData";
 import mainImg from "../assets/main-img44.png";
 import {
@@ -9,22 +9,25 @@ import {
   ShieldCheck,
   MapPin,
   ArrowRight,
+  MapPinCheckInside,
+  MousePointer,
+  Send,
 } from "lucide-react";
 
 function Home() {
-
-// for smooth scroll into cities section 
-const citiesSectionRef = useRef(null);
-const scrollToCities = () => {
-    citiesSectionRef.current?.scrollIntoView({ 
-      behavior: 'smooth' 
-    })};
+  // for smooth scroll into cities section
+  const citiesSectionRef = useRef(null);
+  const scrollToCities = () => {
+    citiesSectionRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="home-page">
-          {/* ============================= */}
-          {/*         Header Section        */}
-          {/* ============================= */}
+      {/* ============================= */}
+      {/*         Header Section        */}
+      {/* ============================= */}
       <section className="hero-section">
         <div className="hero-container">
           {/* ============================= */}
@@ -45,7 +48,9 @@ const scrollToCities = () => {
               <Link to="/billboards" className="btn-primary">
                 Reserve a Panel
               </Link>
-              <button className="btn-secondary" onClick={scrollToCities}>Explore Billboards</button>
+              <button className="btn-secondary" onClick={scrollToCities}>
+                Explore Billboards
+              </button>
             </div>
           </div>
 
@@ -65,7 +70,7 @@ const scrollToCities = () => {
             {/* ========================= */}
             <div className="floating-location">
               <div className="pin-icon">
-                <MapPin size={28} strokeWidth={2} /> 
+                <MapPin size={28} strokeWidth={2} />
               </div>
               <div className="info-text">
                 <strong>Boulevard Mohammed V</strong>
@@ -76,9 +81,93 @@ const scrollToCities = () => {
         </div>
       </section>
 
-          {/* ============================= */}
-          {/*       Features Section        */}
-          {/* ============================= */}
+      {/* ============================= */}
+      {/*      How It Works Section     */}
+      {/* ============================= */}
+      <section className="how-it-works">
+        <h2>How It Works</h2>
+        <p>
+          Reserve your billboard space in just three simple steps. No
+          complicated processes, no hidden fees.
+        </p>
+        <div className="container-cards">
+          <div className="card">
+            <div className="card-top">
+              <div className="icon-box">
+                <MapPinCheckInside />
+              </div>
+              <span className="step-number">01</span>
+            </div>
+            <h5>Choose a City</h5>
+            <p>
+              Select from major cities across Morocco where you want your brand
+              to be seen.
+            </p>
+          </div>
+
+          <div className="card">
+            <div className="card-top">
+              <div className="icon-box">
+                <MousePointer />
+              </div>
+              <span className="step-number">02</span>
+            </div>
+
+            <h5>Select Zone & Billboard</h5>
+            <p>
+              Browse strategic zones and pick the perfect billboard for your
+              campaign.
+            </p>
+          </div>
+
+          <div className="card">
+            <div className="card-top">
+              <div className="icon-box">
+                <Send />
+              </div>
+              <span className="step-number">03</span>
+            </div>
+            <h5>Send Reservation Request</h5>
+            <p>
+              Submit your request and our team will contact you to finalize the
+              booking.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      {/* ============================= */}
+      {/*        Cities Section         */}
+      {/* ============================= */}
+      <section className="cities-section" ref={citiesSectionRef}>
+        <div className="cities-header">
+          <div>
+            <h2>Featured Cities</h2>
+            <p>Explore premium locations in Morocco's economic hubs.</p>
+          </div>
+
+          <Link to="/billboards" className="view-all">
+            View all <span>Cities</span>
+            <ArrowRight size={20} strokeWidth={3} />
+          </Link>
+        </div>
+
+        <div className="cities-container">
+          {CitiesData.map((element, index) => (
+            <Link to="/billboards" key={index} className="cities-cards">
+              <img src={element.photo} alt={element.cityName} />
+              <div className="cities-info">
+                <h5>{element.cityName}</h5>
+                <p>{element.status}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ============================= */}
+      {/*       Features Section        */}
+      {/* ============================= */}
       <section className="features-section">
         <div className="section-title">
           <h2>
@@ -115,35 +204,6 @@ const scrollToCities = () => {
             <h3>Secure Management</h3>
             <p>Your campaigns are protected with our high-security system.</p>
           </div>
-        </div>
-      </section>
-
-          {/* ============================= */}
-          {/*        Cities Section         */}
-          {/* ============================= */}
-      <section className="cities-section" ref={citiesSectionRef}>
-        <div className="cities-header">
-          <div>
-            <h2>Featured Cities</h2>
-            <p>Explore premium locations in Morocco's economic hubs.</p>
-          </div>
-
-          <Link to="/billboards" className="view-all">
-            View all <span>Cities</span>
-            <ArrowRight size={20} strokeWidth={3} />
-          </Link>
-        </div>
-
-        <div className="cities-container">
-          {CitiesData.map((element, index) => (
-            <Link to="/billboards" key={index} className="cities-cards">
-              <img src={element.photo} alt={element.cityName} />
-              <div className="cities-info">
-                <h5>{element.cityName}</h5>
-                <p>{element.status}</p>
-              </div>
-            </Link>
-          ))}
         </div>
       </section>
     </div>

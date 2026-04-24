@@ -45,9 +45,10 @@ function Contact() {
 
   return (
     <div className="contact-wrapper">
-      {/*****************************/}
-      {/*  Section 1: Contact Info  */}
-      {/*****************************/}
+        {/*****************************/}
+        {/*  Section 1: Contact Info  */}
+        {/*****************************/}
+
       <div className="contact-container">
         <div className="contact-info">
           <h2>Get in Touch</h2>
@@ -58,7 +59,7 @@ function Contact() {
           <div className="info-details">
             <div className="info-item">
               <span>
-                <MapPin size={25} strokeWidth={2}/>
+                <MapPin size={25} strokeWidth={2} />
               </span>
               <div>
                 <strong>Headquarters</strong>
@@ -67,7 +68,7 @@ function Contact() {
             </div>
             <div className="info-item">
               <span>
-                <Phone size={25} strokeWidth={2}/>
+                <Phone size={25} strokeWidth={2} />
               </span>
               <div>
                 <strong>Phone</strong>
@@ -76,7 +77,7 @@ function Contact() {
             </div>
             <div className="info-item">
               <span>
-                <Mail  size={25} strokeWidth={2}/>
+                <Mail size={25} strokeWidth={2} />
               </span>
               <div>
                 <strong>Email</strong>
@@ -88,6 +89,7 @@ function Contact() {
         {/*****************************/}
         {/*  Section 2: Contact Form  */}
         {/*****************************/}
+        
         <div className="contact-form-section">
           <form className="pro-form" onSubmit={handleSubmit}>
             <div className="input-group">
@@ -126,6 +128,7 @@ function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                className="special"
               ></textarea>
             </div>
 

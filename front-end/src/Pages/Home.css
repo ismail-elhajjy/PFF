@@ -238,7 +238,7 @@ body{
 /*************************/
 .features-section {
   padding: 80px 24px;
-  background-color: #eff1f4;
+  background: #f9fafb;
   text-align: center;
 }
 
@@ -341,6 +341,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.1rem;
 }
 
 .cities-header {
@@ -436,9 +437,9 @@ body{
   display: none;
 }
 
-/*************************************/
-/* Responsive for the cities section */
-/*************************************/
+/***************************************/
+/*  Responsive for the cities section  */
+/***************************************/
 @media (max-width: 1024px) {
   .cities-container {
     grid-template-columns: repeat(2, 1fr);
@@ -488,5 +489,126 @@ body{
     display: flex;
     align-items: center;
     gap: 5px;
+  }
+}
+
+/*****************************/
+/*   How It Works  Section   */
+/*****************************/
+
+.how-it-works {
+  padding: 80px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.container-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+}
+
+.how-it-works > p {
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.container-cards::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: #f97316;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 18px;
+  border: 1px solid #eee;
+  text-align: left;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1; 
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.icon-box {
+  width: 55px;
+  height: 50px;
+  background: #fff7ed;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-box svg {
+  width: 26px;
+  height: 26px;
+  color: #f97316;
+  transition: all 0.3s ease;
+}
+
+.step-number {
+  font-size: 26px;
+  font-weight: 700;
+  color: #f97316;
+  opacity: 0.3;
+}
+
+.card:hover .icon-box {
+  background: #f97316;
+}
+
+.card:hover .icon-box svg {
+  color: white;
+}
+
+.card h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.card p {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/*********************************************/
+/*  Responsive for the How It Works section  */
+/*********************************************/
+@media (max-width: 768px) {
+  .container-cards::before {
+    display: none;
   }
 }
