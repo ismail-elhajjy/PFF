@@ -8,6 +8,7 @@ import NavBar from "./Components/Navbar.jsx";
 import Home from "./Pages/Home.jsx";
 import Billboards from "./Pages/Billboards.jsx";
 import Reservation from "./Pages/Reservation.jsx";
+import "./App.css";
 
 function App() {
   return (

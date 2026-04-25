@@ -2,6 +2,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import CitiesData from "../Data/CitiesData";
+import Testimonials from "../Data/Testimonials";
 import mainImg from "../assets/main-img44.png";
 import {
   BarChart3,
@@ -49,7 +50,7 @@ function Home() {
                 Reserve a Panel
               </Link>
               <button className="btn-secondary" onClick={scrollToCities}>
-                Explore Billboards
+                Explore Billboards 
               </button>
             </div>
           </div>
@@ -85,7 +86,7 @@ function Home() {
       {/*      How It Works Section     */}
       {/* ============================= */}
       <section className="how-it-works">
-        <h2>How It Works</h2>
+        <h2>How It <span> Works</span></h2>
         <p>
           Reserve your billboard space in just three simple steps. No
           complicated processes, no hidden fees.
@@ -135,13 +136,13 @@ function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* ============================= */}
       {/*        Cities Section         */}
       {/* ============================= */}
       <section className="cities-section" ref={citiesSectionRef}>
         <div className="cities-header">
-          <div>
+          <div className="cities-title">
             <h2>Featured Cities</h2>
             <p>Explore premium locations in Morocco's economic hubs.</p>
           </div>
@@ -203,6 +204,98 @@ function Home() {
             </div>
             <h3>Secure Management</h3>
             <p>Your campaigns are protected with our high-security system.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================= */}
+      {/*     Testimonials Section      */}
+      {/* ============================= */}
+
+      <section className="testimonials-section">
+        <div className="testimonials-container">
+          {/* =========================== */}
+          {/*     Testimonials Header     */}
+          {/* =========================== */}
+          <div className="testimonials-header">
+            <span className="badge">CLIENT TESTIMONIALS</span>
+            <h2>
+              They <span>trust</span> us
+            </h2>
+            <p>
+              Moroccan companies that boosted their visibility with AtlasAds
+            </p>
+          </div>
+          <div className="testimonials-grid">
+            {Testimonials.map((t) => (
+              <div key={t.id} className="testimonial-card">
+                <div className="stars">★★★★★</div>
+                <div className="quote-icon">"</div>
+                <p className="testimonial-text">{t.quote}</p>
+                <div className="user-profile">
+                  <div className={`avatar ${t.colorClass}`}>{t.initials}</div>
+                  <div className="user-details">
+                    <h4>{t.name}</h4>
+                    <p className="role">{t.role}</p>
+                    <p className="city">{t.city}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* =========================== */}
+          {/*        Stats Section        */}
+          {/* =========================== */}
+          <div className="stats-container">
+            <div className="stat-card">
+              <h3>500+</h3>
+              <p>Available Billboards</p>
+            </div>
+            <div className="stat-card">
+              <h3>8</h3>
+              <p>Cities Covered</p>
+            </div>
+            <div className="stat-card">
+              <h3>98%</h3>
+              <p>Satisfied Clients</p>
+            </div>
+            <div className="stat-card">
+              <h3>200+</h3>
+              <p>Campaigns Realized</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================= */}
+      {/*         CTA Section           */}
+      {/* ============================= */}
+      <section className="cta-section">
+        <div className="cta-container">
+          <div className="cta-content">
+            <h2>
+              Ready to boost your <span>brand visibility?</span>
+            </h2>
+            <p>
+              Join hundreds of Moroccan businesses and start your outdoor
+              advertising campaign today with AtlasAds.
+            </p>
+
+            <div className="cta-buttons">
+              <Link to="/billboards" className="start-btn">
+                Start Your Campaign Now
+              </Link>
+
+              <Link to="/contact" className="contact-btn">
+                Contact Sales
+              </Link>
+            </div>
+          </div>
+
+          <div className="cta-decoration">
+            {/* هاد الدائرة كتعطي جمالية بلا ما تزحم العين */}
+            <div className="glow-circle"></div>
           </div>
         </div>
       </section>

@@ -1,12 +1,3 @@
-/*****************/
-/*   Home Page   */
-/*****************/
-
-body{
-  font-family: "Inter", sans-serif;
-}
-
-
 .home-page {
   width: 100%;
   min-height: 100vh;
@@ -248,6 +239,11 @@ body{
   font-size: 1.1rem;
 }
 
+.section-title h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -306,30 +302,78 @@ body{
   color: #ea580c;
 }
 
-/*******************************************/
-/*  Responsive for the first two sections  */
-/*******************************************/
+/*********************************************/
+/*   Responsive for the first two sections   */
+/*********************************************/
 
 @media (max-width: 992px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
+    padding-top: 40px;
   }
+
   .hero-text-content {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .hero-btns {
+    display: flex;
+    flex-direction: row;  
+    gap: 15px;
     justify-content: center;
   }
+
   .hero-img {
     transform: none;
     margin-top: 40px;
+    max-width: 100%;  
   }
 }
 
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 1.8rem;
+    padding: 0 10px;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    width: 100%;  
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 16px 20px;
+    max-width: 300px;
+    font-size: 1rem;
+    border-radius: 12px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-btns {
+    padding: 0 20px;
+  }
+}
 
 /************************/
 /*    Cities Section    */
@@ -351,6 +395,11 @@ body{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+}
+
+.cities-title h2 {
+  font-weight: 800;
+  color: #0f172a;
 }
 
 .cities-container {
@@ -479,7 +528,7 @@ body{
     gap: 15px;
     margin-bottom: 25px;
   }
-  
+
   .view-all {
     display: inline-block;
     padding: 10px 25px;
@@ -503,9 +552,13 @@ body{
 }
 
 .how-it-works h2 {
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 800;
   margin-bottom: 10px;
+}
+
+.how-it-works h2 span {
+  color: #f97316;
 }
 
 .container-cards {
@@ -543,12 +596,12 @@ body{
   text-align: left;
   transition: all 0.3s ease;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .card-top {
@@ -610,5 +663,415 @@ body{
 @media (max-width: 768px) {
   .container-cards::before {
     display: none;
+  }
+}
+
+/***********************/
+/*     Testimonials    */
+/***********************/
+
+.testimonials-section {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(249, 115, 22, 0.05) 0%,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(30, 58, 138, 0.1) 0%,
+      transparent 40%
+    ),
+    linear-gradient(135deg, #020617 0%, #22345d 100%);
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonials-header .badge {
+  display: inline-block;
+  background: rgba(249, 115, 22, 0.1);
+  color: #f97316;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.testimonials-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 20px 0 12px;
+  color: #ffffff;
+}
+
+.testimonials-header h2 span {
+  color: #f97316;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials-header p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(249, 115, 22, 0.35);
+  transform: translateY(-4px);
+}
+
+.testimonial-card {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 251, 0, 0.05);
+  position: relative;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.testimonial-text {
+  font-style: italic;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  min-height: 100px;
+  font-size: 0.95rem;
+  flex-grow: 1;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  color: #f97316;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.quote-icon {
+  font-size: 40px;
+  color: #f97316;
+  font-family: Georgia, serif;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(181, 176, 176, 0.169);
+  padding-top: 20px;
+  margin-top: auto;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.avatar.ka {
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+}
+.avatar.sb {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+.avatar.ym {
+  background: rgba(74, 222, 128, 0.15);
+  color: #4ade80;
+}
+
+.user-details h4 {
+  margin: 0 0 3px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.user-details .role {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0 0 3px;
+}
+
+.user-details .city {
+  font-size: 0.82rem;
+  color: #f97316;
+  font-weight: 600;
+  margin: 0;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 80px auto 0;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255, 0, 0, 0.07);
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f97316;
+  margin: 0 0 6px;
+}
+
+.stat-card p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ================================================== */
+/*     Responsive for the testimonials section        */
+/* ================================================== */
+
+
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    /* نقصت المينيموم ديال الكارط باش يجمع راسو فـ Tablets */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-header {
+    margin-bottom: 40px;
+    padding: 0 15px;
+  }
+
+  .testimonials-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .testimonials-grid {
+    /* كيرجعو الكارطات وحدة فوق وحدة فالتليفون */
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 15px;
+  }
+
+  .testimonial-card {
+    padding: 25px;
+    /* كنحيدو الـ min-height فالموبايل باش الكارط ما تجيش طويلة بزاف خاوية */
+    height: auto;
+  }
+
+  .testimonial-text {
+    min-height: auto;
+    margin-bottom: 20px;
+  }
+
+  .stats-container {
+    margin-top: 60px;
+    padding-top: 30px;
+    display: grid;
+    /* كيجيو 2 فكل سطر بشكل متوازن */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+
+  .stat-card h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .stats-container {
+    /* فالتليفونات صغار بزاف، كل رقم كياخد سطر */
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .avatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .user-details h4 {
+    font-size: 0.95rem;
+  }
+}
+
+/***********************/
+/*     CTA Section     */
+/***********************/
+.cta-section {
+  background-color: #ffffff;
+
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #f1f5f9;
+}
+
+.cta-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background-color:#f3f4f4c3;
+  padding: 50px 20px;
+  border-radius: 20px;
+}
+
+.cta-content h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.cta-content h2 span {
+  color: #f97316;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.start-btn {
+  background-color: #f97316;
+  color: white;
+  padding: 18px 36px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
+}
+
+.start-btn:hover {
+  background-color: #ea580c;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 25px -5px rgba(249, 115, 22, 0.4);
+}
+
+.contact-btn {
+  background-color: transparent;
+  color: #0f172a;
+  padding: 18px 36px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: 2px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.glow-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(249, 115, 22, 0.05) 0%,
+    transparent 70%
+  );
+  z-index: -1;
+}
+
+.start-btn,
+.contact-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* ============================== */
+/*    Responsive for the CTA      */
+/* ============================== */
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 70px 20px;
+  }
+
+  .cta-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column; /* البوطونات كيجيو واحد فوق واحد في الموبايل */
+    gap: 15px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 16px;
   }
 }

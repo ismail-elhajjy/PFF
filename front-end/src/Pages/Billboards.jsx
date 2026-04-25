@@ -128,9 +128,9 @@ function Billboards() {
       <h1>Billboard Spaces</h1>
       <p>Find the perfect advertising location across Morocco.</p>
 
-      {/******************/}
-      {/* Filter Section */}
-      {/******************/}
+        {/******************/}
+        {/* Filter Section */}
+        {/******************/}
       <div className="filter-wrapper">
         {/*****************/}
         {/* City Location */}
@@ -309,6 +309,7 @@ function Billboards() {
           <p className="no-data">No billboards match your search criteria.</p>
         )}
       </div>
+      
     </div>
   );
 }

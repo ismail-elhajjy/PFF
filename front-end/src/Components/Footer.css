@@ -1,3 +1,5 @@
+
+
 .footer-container {
   background:
     radial-gradient(
@@ -13,7 +15,6 @@
     linear-gradient(135deg, #020617 0%, #121d37 100%);
   color: #ffffff;
   padding: 40px 20px 10px 20px;
-  font-family: Arial, sans-serif;
 }
 
 .footer-content {
