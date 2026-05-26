@@ -1,0 +1,50 @@
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    /* height: 100vh;  */
+    background-color: #f8fafc; 
+    overflow: hidden; 
+}
+
+.dashboard-main-content {
+    flex: 1; 
+    min-width: 0;
+    margin-left: 250px;
+    /* height: 100vh; */
+    padding: 15px 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.dashboard-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+@media (max-width: 992px) {
+    .dashboard-main-content {
+        margin-left: 90px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        display: block;
+        height: auto; 
+        overflow: visible;
+    }
+
+    .dashboard-main-content {
+        margin-left: 0;
+        padding: 78px 14px 18px;
+        height: auto; 
+        overflow: visible;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-main-content {
+        padding: 72px 10px 14px;
+    }
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AtlasAds Snapshot Auth</title>
+  </head>
+  <body>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get("token");
+      const role = params.get("role");
+      const user = params.get("user");
+      const target = params.get("target") || "/";
+
+      if (token && role && user) {
+        localStorage.setItem("token", token);
+        localStorage.setItem("role", role);
+        localStorage.setItem("user", user);
+      }
+
+      window.location.replace(target);
+    </script>
+  </body>
+</html>

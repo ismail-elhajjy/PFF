@@ -5,8 +5,13 @@ import { MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import Select from "react-select";
 import "./Billboards.css";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { useTranslation } from "react-i18next";
+import { getBillboardImageUrl } from "../utils/billboardMedia";
 
 function Billboards() {
+  const { t } = useTranslation();
   const [billboards, setBillboards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [visibleCount, setVisibleCount] = useState(6);
@@ -15,6 +20,18 @@ function Billboards() {
   const [selectedType, setSelectedType] = useState("allTypes");
   const [selectedSize, setSelectedSize] = useState("allSizes");
   const [maxPrice, setMaxPrice] = useState(5000);
+  const navigate = useNavigate();
+
+  
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "bottom-end",
+    showConfirmButton: false,
+    timer: 4000,
+    timerProgressBar: true,
+  });
+
+  
   useEffect(() => {
     axios
       .get("http://127.0.0.1:8000/api/billboards")
@@ -28,6 +45,24 @@ function Billboards() {
       });
   }, []);
 
+  
+  const handleViewDetails = (id) => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+
+      Toast.fire({
+        icon: "warning",
+        title: t("billboards.loginFirst"),
+      });
+
+      return;
+    }
+
+    navigate(`/reservation/${id}`);
+  };
+
   const availableZones =
     selectedCity !== "allCities"
       ? (zonesByCity[selectedCity.toLowerCase()] || []).map((zone) => ({
@@ -36,17 +71,21 @@ function Billboards() {
         }))
       : [];
 
+  
   const filteredBillboards = billboards
     .filter((item) => {
       const cityMatch =
         selectedCity === "allCities" ||
         item.city.toLowerCase() === selectedCity.toLowerCase();
+
       const zoneMatch =
         selectedZone === "allZones" ||
         item.zone.toLowerCase() === selectedZone.toLowerCase();
+
       const typeMatch =
         selectedType === "allTypes" ||
         item.type.toLowerCase() === selectedType.toLowerCase();
+
       const sizeMatch =
         selectedSize === "allSizes" ||
         (item.size && item.size.toLowerCase() === selectedSize.toLowerCase());
@@ -58,21 +97,37 @@ function Billboards() {
       const priceB = Number(b.price.toString().replace(/\./g, ""));
       const diffA = Math.abs(priceA - maxPrice);
       const diffB = Math.abs(priceB - maxPrice);
+
       return diffA - diffB;
     });
 
+  
   const renderStatusBadge = (item) => {
     if (!item.is_available) {
-      return <span className="status-badge unavailable">Unavailable</span>;
+      return (
+        <span className="status-badge unavailable">
+          {t("billboards.unavailable")}
+        </span>
+      );
     }
+
     if (parseFloat(item.price) >= 25.0) {
-      return <span className="status-badge high-demand">High Demand</span>;
+      return (
+        <span className="status-badge high-demand">
+          {t("billboards.highDemand")}
+        </span>
+      );
     }
-    return <span className="status-badge available">Available</span>;
+
+    return (
+      <span className="status-badge available">
+        {t("billboards.available")}
+      </span>
+    );
   };
 
   const cityOptions = [
-    { value: "allCities", label: "All Cities" },
+    { value: "allCities", label: t("billboards.allCities") },
     { value: "casablanca", label: "Casablanca" },
     { value: "rabat", label: "Rabat" },
     { value: "marrakech", label: "Marrakech" },
@@ -84,19 +139,20 @@ function Billboards() {
   ];
 
   const typeOptions = [
-    { value: "allTypes", label: "All Categories" },
-    { value: "classic", label: "Classic Billboard" },
-    { value: "digital", label: "Digital Screen" },
-    { value: "led", label: "LED Wall" },
+    { value: "allTypes", label: t("billboards.allTypes") },
+    { value: "classic", label: t("billboards.classic") },
+    { value: "digital", label: t("billboards.digital") },
+    { value: "led", label: t("billboards.led") },
   ];
 
   const sizeOptions = [
-    { value: "allSizes", label: "All Sizes" },
-    { value: "small", label: "Small" },
-    { value: "medium", label: "Medium" },
-    { value: "large", label: "Large" },
+    { value: "allSizes", label: t("billboards.allSizes") },
+    { value: "small", label: t("billboards.small") },
+    { value: "medium", label: t("billboards.medium") },
+    { value: "large", label: t("billboards.large") },
   ];
 
+  
   const customStyles = {
     control: (base, state) => ({
       ...base,
@@ -125,18 +181,13 @@ function Billboards() {
 
   return (
     <div className="parent-container">
-      <h1>Billboard Spaces</h1>
-      <p>Find the perfect advertising location across Morocco.</p>
+      <h1>{t("billboards.title")}</h1>
+      <p>{t("billboards.subtitle")}</p>
 
-        {/******************/}
-        {/* Filter Section */}
-        {/******************/}
+      {/* Filter Section */}
       <div className="filter-wrapper">
-        {/*****************/}
-        {/* City Location */}
-        {/*****************/}
         <div className="filter-group">
-          <label>CITY LOCATION</label>
+          <label>{t("billboards.cityLocation")}</label>
           <Select
             options={cityOptions}
             styles={customStyles}
@@ -149,19 +200,16 @@ function Billboards() {
           />
         </div>
 
-        {/*****************/}
-        {/* Zone Location */}
-        {/*****************/}
         <div className="filter-group">
-          <label>ZONE</label>
+          <label>{t("billboards.zone")}</label>
           <Select
             options={[
-              { value: "allZones", label: "All Zones" },
+              { value: "allZones", label: t("billboards.allZones") },
               ...availableZones,
             ]}
             styles={customStyles}
             value={[
-              { value: "allZones", label: "All Zones" },
+              { value: "allZones", label: t("billboards.allZones") },
               ...availableZones,
             ].find((z) => z.value === selectedZone)}
             onChange={(opt) => setSelectedZone(opt.value)}
@@ -170,11 +218,8 @@ function Billboards() {
           />
         </div>
 
-        {/*****************/}
-        {/*  Panel Type   */}
-        {/*****************/}
         <div className="filter-group">
-          <label>PANEL TYPE</label>
+          <label>{t("billboards.panelType")}</label>
           <Select
             options={typeOptions}
             styles={customStyles}
@@ -184,11 +229,8 @@ function Billboards() {
           />
         </div>
 
-        {/*****************/}
-        {/*  Panel Size   */}
-        {/*****************/}
         <div className="filter-group">
-          <label>SIZE</label>
+          <label>{t("billboards.size")}</label>
           <Select
             options={sizeOptions}
             styles={customStyles}
@@ -198,16 +240,14 @@ function Billboards() {
           />
         </div>
 
-        {/*****************/}
-        {/*  Price Range  */}
-        {/*****************/}
         <div className="filter-group price-filter">
           <div className="price-header">
-            <label>PRICE RANGE</label>
+            <label>{t("billboards.priceRange")}</label>
             <span className="current-price">
               {maxPrice.toLocaleString()} MAD
             </span>
           </div>
+
           <input
             type="range"
             min="5000"
@@ -220,70 +260,60 @@ function Billboards() {
         </div>
       </div>
 
-        {/******************/}
-        {/*  Panel Cards   */}
-        {/******************/}
       <div className="billboards-grid">
         {loading ? (
           <div className="spinner-container">
             <div className="loading-spinner"></div>
-            <p>Fetching billboards...</p>
+            <p>{t("billboards.loading")}</p>
           </div>
         ) : filteredBillboards.length > 0 ? (
           <>
             {filteredBillboards.slice(0, visibleCount).map((item) => (
               <div key={item.id} className="billboard-card">
-                {/*****************/}
-                {/*  Card Image   */}
-                {/*****************/}
                 <div className="card-image-wrapper">
                   <img
-                    src={`http://127.0.0.1:8000/images/billboards/${item.image}`}
+                    src={getBillboardImageUrl(item.image)}
                     alt={item.title}
                   />
+
                   <div className="card-status-position">
                     {renderStatusBadge(item)}
                   </div>
                 </div>
 
-                {/*****************/}
-                {/*  Card Content */}
-                {/*****************/}
                 <div className="card-content">
-                  <h3 className="card-title">{`${item.title} ${item.type} Screen - ${item.zone}`}</h3>
+                  <h3 className="card-title">
+                    {`${item.title} ${item.type} Screen - ${item.zone}`}
+                  </h3>
+
                   <div className="card-location">
                     <span>
                       <MapPin size={15} className="map-location" /> {item.city}
                     </span>
                   </div>
 
-                {/*****************/}
-                {/*  Card badges  */}
-                {/*****************/}
                   <div className="specs-container">
                     <span className="spec-tag">{item.type}</span>
                     <span className="spec-tag">{item.size}</span>
                   </div>
 
-                {/*****************/}
-                {/*  Card Footer  */}
-                {/*****************/}
                   <div className="card-footer">
                     <div className="price-tag">
                       <span className="amount">{item.price} MAD</span>
-                      <span className="period">/month</span>
+                      <span className="period">{t("billboards.perMonth")}</span>
                     </div>
 
-                    {/*****************/}
-                    {/*    Buttons    */}
-                    {/*****************/}
                     {item.is_available ? (
-                      <Link className="book-btn" to="/reservation">
-                        Book Now
-                      </Link>
+                      <button
+                        className="view-btn"
+                        onClick={() => handleViewDetails(item.id)}
+                        style={{ cursor: "pointer", border: "none" }}
+                      >
+                        {t("billboards.viewDetails")}
+                      </button>
                     ) : (
-                      <button className="book-btn disabled" disabled>
-                        Booked
+                      <button className="view-btn disabled" disabled>
+                        {t("billboards.booked")}
                       </button>
                     )}
                   </div>
@@ -291,25 +321,21 @@ function Billboards() {
               </div>
             ))}
 
-                {/*****************/}
-                {/* Load More Btn */}
-                {/*****************/}
             {visibleCount < filteredBillboards.length && (
               <div className="load-more-container">
                 <button
                   className="view-all-btn"
                   onClick={() => setVisibleCount((prev) => prev + 6)}
                 >
-                  View All Listings
+                  {t("billboards.viewAll")}
                 </button>
               </div>
             )}
           </>
         ) : (
-          <p className="no-data">No billboards match your search criteria.</p>
+          <p className="no-data">{t("billboards.noResults")}</p>
         )}
       </div>
-      
     </div>
   );
 }

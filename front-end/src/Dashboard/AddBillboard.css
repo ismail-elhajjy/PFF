@@ -1,0 +1,583 @@
+.billboard-page-wrapper {
+  padding: 2rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.billboard-top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 18px;
+}
+
+.billboard-top-section h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.billboard-page-eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 6px;
+  color: #f97316;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.billboard-back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.billboard-back-button:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.billboard-create-form {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.billboard-form-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.billboard-form-heading h2,
+.billboard-manage-header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.billboard-form-heading p,
+.billboard-manage-header p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.billboard-reset-button,
+.billboard-refresh-button {
+  min-height: 40px;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  padding: 9px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff7ed;
+  color: #ea580c;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.billboard-reset-button:hover,
+.billboard-refresh-button:hover {
+  background: #f97316;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(249, 115, 22, 0.18);
+}
+
+.billboard-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.billboard-field-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.billboard-field-box:last-child {
+  grid-column: span 2;
+}
+
+.billboard-field-box.full-width {
+  grid-column: span 2;
+}
+
+.billboard-field-box label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.billboard-field-box input,
+.billboard-field-box select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  color: #334155;
+  transition: border-color 0.2s;
+}
+
+.billboard-field-box input:focus,
+.billboard-field-box select:focus {
+  outline: none;
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.1);
+}
+
+.billboard-upload-area {
+  position: relative;
+  border: 2px dashed #cbd5e1;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.billboard-upload-area:hover {
+  background-color: #f8fafc;
+  border-color: #ff7a00;
+}
+
+.upload-icon {
+  margin-right: 10px;
+  margin-bottom: -5px;
+}
+
+.billboard-upload-area input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.billboard-save-button {
+  margin-top: 2.5rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: #ff7a00;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.billboard-save-button:hover {
+  background-color: #e66e00;
+  transform: translateY(-2px);
+}
+
+.billboard-save-button:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.billboard-upload-area {
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  background: #fdfdfd;
+}
+
+.billboard-upload-area.file-selected {
+  border: 2px solid #ff7a00;
+  background: #fff9f5;
+}
+
+.file-signal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ff7a00;
+  font-weight: 600;
+}
+
+.file-name {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.check-icon {
+  color: #10b981;
+}
+
+.clear-file-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.billboard-manage-section {
+  max-width: 1180px;
+  margin: 34px auto 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.billboard-manage-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.billboard-admin-state {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #64748b;
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+  background: #f8fafc;
+}
+
+.billboard-admin-spinner {
+  width: 38px;
+  height: 38px;
+  border: 4px solid #ffedd5;
+  border-top-color: #f97316;
+  border-radius: 999px;
+  animation: billboardAdminSpin 0.8s linear infinite;
+}
+
+@keyframes billboardAdminSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.billboard-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.billboard-admin-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.billboard-admin-card:hover,
+.billboard-admin-card.is-editing {
+  transform: translateY(-3px);
+  border-color: #fed7aa;
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+}
+
+.billboard-admin-card.is-editing {
+  outline: 3px solid rgba(249, 115, 22, 0.14);
+}
+
+.billboard-admin-image {
+  position: relative;
+  height: 190px;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.billboard-admin-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.billboard-admin-status {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.billboard-admin-status.available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.billboard-admin-status.unavailable {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.billboard-admin-content {
+  padding: 16px;
+}
+
+.billboard-admin-content h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.billboard-admin-content p {
+  margin: 9px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.billboard-admin-content p svg {
+  color: #f97316;
+  flex-shrink: 0;
+}
+
+.billboard-admin-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.billboard-admin-tags span {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #475569;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.billboard-admin-footer {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.billboard-admin-footer strong {
+  color: #f97316;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.billboard-admin-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.billboard-edit-button,
+.billboard-delete-button {
+  min-height: 40px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid transparent;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.billboard-edit-button {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+.billboard-edit-button:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.billboard-delete-button {
+  background: #fff1f2;
+  color: #e11d48;
+  border-color: #ffe4e6;
+}
+
+.billboard-delete-button:hover {
+  background: #e11d48;
+  color: #ffffff;
+}
+
+
+
+@media (max-width: 1100px) {
+  .billboard-admin-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .billboard-top-section,
+  .billboard-form-heading,
+  .billboard-manage-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .billboard-admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .billboard-manage-section {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .billboard-refresh-button,
+  .billboard-reset-button,
+  .billboard-back-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .billboard-page-wrapper {
+    padding: 0;
+  }
+
+  .billboard-top-section {
+    margin-bottom: 1rem;
+  }
+
+  .billboard-top-section h1 {
+    font-size: 1.55rem;
+  }
+
+  .billboard-fields-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .billboard-field-box:last-child,
+  .billboard-field-box.full-width {
+    grid-column: span 1;
+  }
+
+  .billboard-create-form {
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+
+  .billboard-form-heading {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .billboard-upload-area {
+    padding: 18px 14px;
+  }
+
+  .file-signal {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .file-name {
+    max-width: min(230px, 68vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .billboard-admin-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .billboard-admin-image {
+    height: 170px;
+  }
+
+  .billboard-save-button {
+    font-size: 1rem;
+  }
+}

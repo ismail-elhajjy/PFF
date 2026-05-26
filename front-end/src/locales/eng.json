@@ -1,0 +1,532 @@
+{
+  "nav": {
+    "home": "Home",
+    "billboards": "Billboards",
+    "contact": "Contact",
+    "profile": "Profile",
+    "login": "Login",
+    "logout": "Logout"
+  }
+,
+ 
+  "home": {
+    "hero": {
+      "title_part1": "Your Growth Starts with",
+      "description": "The ultimate platform to manage, track, and showcase your billboard campaigns with precision and style. Elevate your brand today.",
+      "btn_reserve": "Reserve a Panel",
+      "btn_explore": "Explore Billboards",
+      "floating_location": "Boulevard Mohammed V",
+      "floating_zone": "Premium Zone"
+    },
+    "how_it_works": {
+      "title_part1": "How It",
+      "title_part2": "Works",
+      "description": "Reserve your billboard space in just three simple steps. No complicated processes, no hidden fees.",
+      "step1_title": "Choose a City",
+      "step1_desc": "Select from major cities across Morocco where you want your brand to be seen.",
+      "step2_title": "Select Zone & Billboard",
+      "step2_desc": "Browse strategic zones and pick the perfect billboard for your campaign.",
+      "step3_title": "Send Reservation Request",
+      "step3_desc": "Submit your request and our team will contact you to finalize the booking."
+    },
+    "cities": {
+      "title": "Featured Cities",
+      "description": "Explore premium locations in Morocco's economic hubs.",
+      "view_all": "View all",
+      "cities_span": "Cities"
+    },
+    "features": {
+      "title_part1": "Why Choose",
+      "subtitle": "The complete platform for outdoor advertising in Morocco.",
+      "feat1_title": "Real-time Stats",
+      "feat1_desc": "Track your billboard performance with live data and smart charts.",
+      "feat2_title": "Wide Coverage",
+      "feat2_desc": "Access the best locations across the country for your brand.",
+      "feat3_title": "Secure Management",
+      "feat3_desc": "Your campaigns are protected with our high-security system."
+    },
+    "testimonials": {
+      "badge": "CLIENT TESTIMONIALS",
+      "title_part1": "They",
+      "title_part2": "trust",
+      "title_part3": "us",
+      "subtitle": "Moroccan companies that boosted their visibility with AtlasAds"
+    },
+    "stats": {
+      "billboards": "Available Billboards",
+      "cities": "Cities Covered",
+      "satisfied": "Satisfied Clients",
+      "campaigns": "Campaigns Realized"
+    },
+    "cta": {
+      "title_part1": "Ready to boost your",
+      "title_part2": "brand visibility?",
+      "description": "Join hundreds of Moroccan businesses and start your outdoor advertising campaign today with AtlasAds.",
+      "btn_start": "Start Your Campaign Now",
+      "btn_contact": "Contact Sales"
+    }
+  }
+  ,
+
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions about our billboards? Our team is here to help you grow your brand.",
+
+    "info": {
+      "headquarters": "Headquarters",
+      "location": "Dar Bouazza, Casablanca, Morocco",
+      "phone": "Phone",
+      "email": "Email"
+    },
+
+    "form": {
+      "fullname": "Full Name",
+      "fullnamePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "message": "Your Message",
+      "messagePlaceholder": "How can we assist you today?",
+      "sendBtn": "Send Message",
+      "sendingBtn": "Sending..."
+    },
+
+    "status": {
+      "sending": "Sending your message...",
+      "success": "Thank you! Your message has been sent successfully.",
+      "error": "Connection error. Please try again later."
+    }
+  }
+,
+
+  "login": {
+    "left": {
+      "title": "Welcome back to",
+      "subtitle": "Sign in to manage your billboard reservations and campaigns across Morocco.",
+      "footer": "© 2026 AtlasAds. All rights reserved."
+    },
+
+    "right": {
+      "title": "Sign In",
+      "subtitle": "Enter your credentials to access your account"
+    },
+
+    "form": {
+      "email": "Email Address",
+      "password": "Password",
+      "loginBtn": "Sign In",
+      "loadingBtn": "Signing in..."
+    },
+
+    "register": {
+      "text": "Don't have an account?",
+      "link": "Register here"
+    },
+
+    "backHome": "Back to Home",
+
+    "errors": {
+      "server": "Problem connecting to the server. Please try again later.",
+      "invalidCredentials": "Incorrect email or password. Please check and try again.",
+      "validation": "Please provide a valid email and password.",
+      "general": "Something went wrong. Please try again later."
+    }
+  }
+,
+
+  "register": {
+    "join": "Join",
+    "desc": "Create an account to manage your billboard reservations and campaigns across Morocco.",
+    "footer": "© 2026 AtlasAds. All rights reserved.",
+    "signUp": "Sign Up",
+    "subtitle": "Enter your details to create your account",
+    "success": "Account created! Redirecting to login...",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "signingUp": "Signing up...",
+    "haveAccount": "Already have an account?",
+    "loginHere": "Login here",
+    "backHome": "Back to Home"
+  }
+,
+
+"profile": {
+  "myAccount": "My account",
+  "emailNotFound": "Email not found",
+  "reservations": "Reservations",
+  "confirmed": "Confirmed",
+  "totalSpent": "Total spent",
+  "history": "Reservation history",
+  "bookings": "Your billboard bookings",
+  "loadingReservations": "Loading your reservations...",
+  "noReservations": "No reservations yet",
+  "noReservationsDesc": "Your billboard reservations will appear here after booking.",
+  "billboard": "Billboard",
+  "type": "Type",
+  "size": "Size",
+  "startDate": "Start date",
+  "endDate": "End date",
+  "price": "Price",
+  "status": "Status",
+  "action": "Action",
+  "cancel": "Cancel",
+  "pdf": "PDF",
+  "loadError": "We couldn't load your reservations right now.",
+  "generatingPdf": "Generating your PDF...",
+  "invalidFile": "Invalid file format received",
+  "downloadSuccess": "Downloaded successfully",
+  "serverError": "Server error. Try again later.",
+  "areYouSure": "Are you sure?",
+  "cancelWarning": "You won't be able to revert this!",
+  "confirmCancel": "Yes, cancel it!",
+  "cancelled": "Cancelled!",
+  "cancelSuccess": "Your reservation has been cancelled.",
+  "error": "Error!",
+  "somethingWrong": "Something went wrong."
+}
+,
+
+  "reservation": {
+    "loading": "Loading...",
+    "notFound": "Billboard Not Found",
+    "backCatalog": "Back to Catalog",
+    "screen": "Screen",
+    "perMonth": "/month",
+
+    "steps": {
+      "select": "Select",
+      "details": "Details",
+      "payment": "Payment",
+      "success": "Success"
+    },
+
+    "clientDetails": "Client Details",
+    "companyName": "Company Name",
+    "optional": "Optional",
+    "phone": "Phone Number",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "continuePayment": "Continue to Payment",
+
+    "finalize": "Finalize Reservation",
+    "imageOnly": "Image only",
+    "videoOnly": "Video only",
+    "imageVideo": "Image or Video",
+    "uploadCreative": "Click to upload creative asset",
+
+    "total": "Estimated Total:",
+    "duration": "Duration:",
+    "days": "Days",
+
+    "back": "Back",
+    "confirm": "Confirm",
+
+    "confirmedTitle": "Reservation Confirmed!",
+    "confirmedText": "Your billboard reservation has been successfully submitted.",
+    "backHome": "Back to Home",
+    "downloadReceipt": "Download Receipt",
+
+    "requiredFields": "Please fill all required fields",
+    "uploadRequired": "Please upload your creative design",
+    "submissionFailed": "Submission failed",
+    "uploadText": "Upload your creative content"
+  },
+  
+  "billboards": {
+    "title": "Billboard Spaces",
+    "subtitle": "Find the perfect advertising location across Morocco.",
+    "cityLocation": "CITY LOCATION",
+    "zone": "ZONE",
+    "panelType": "PANEL TYPE",
+    "size": "SIZE",
+    "priceRange": "PRICE RANGE",
+
+    "allCities": "All Cities",
+    "allZones": "All Zones",
+    "allTypes": "All Types",
+    "allSizes": "All Sizes",
+
+    "classic": "Classic Billboard",
+    "digital": "Digital Screen",
+    "led": "LED Wall",
+
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large",
+
+    "loading": "Loading...",
+    "viewDetails": "View Details",
+    "booked": "Booked",
+    "viewAll": "View All Listings",
+    "noResults": "No billboards match your search criteria.",
+    "loginFirst": "Please login first to view details",
+
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "highDemand": "High Demand",
+
+    "perMonth": "/month"
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,
+  "dashboard": {
+    "common": {
+      "admin": "Admin",
+      "adminPanel": "Admin panel",
+      "areYouSure": "Are you sure?",
+      "back": "Back",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "deleteConfirm": "Yes, delete it",
+      "deleted": "Deleted!",
+      "error": "Error",
+      "language": "Language",
+      "logout": "Log out",
+      "missingInfo": "Missing info",
+      "next": "Next",
+      "noData": "No data available",
+      "of": "of",
+      "page": "Page",
+      "previous": "Previous",
+      "saved": "Saved",
+      "saving": "Saving...",
+      "somethingWrong": "Something went wrong.",
+      "unknown": "Unknown",
+      "update": "Update",
+      "updated": "Updated!",
+      "viewAll": "View all"
+    },
+    "languages": {
+      "english": "English",
+      "french": "French",
+      "arabic": "Arabic"
+    },
+    "status": {
+      "available": "Available",
+      "cancelled": "Cancelled",
+      "confirmed": "Confirmed",
+      "pending": "Pending",
+      "rejected": "Rejected",
+      "unavailable": "Unavailable"
+    },
+    "roles": {
+      "admin": "Admin",
+      "client": "Client"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "empty": "No new updates",
+      "markAllRead": "Mark all as read",
+      "newReservation": "New reservation from {{client}} for \"{{billboard}}\""
+    },
+    "sidebar": {
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "dashboard": "Dashboard",
+      "billboards": "Billboards",
+      "reservations": "Reservations",
+      "users": "Users",
+      "settings": "Settings"
+    },
+    "overview": {
+      "title": "Dashboard",
+      "addBillboard": "Add Billboard",
+      "stats": {
+        "totalBillboards": "Total Billboards",
+        "activeReservations": "Active Reservations",
+        "monthlyRevenue": "Monthly Revenue",
+        "totalUsers": "Total Users"
+      },
+      "charts": {
+        "revenue": "Monthly Revenue Overview",
+        "types": "Billboard Types"
+      }
+    },
+    "contacts": {
+      "kicker": "Contact messages",
+      "title": "User Contacts",
+      "search": "Search name, email, message...",
+      "empty": "No contact messages found"
+    },
+    "reservations": {
+      "title": "Reservations",
+      "search": "Search client, city, type...",
+      "allStatus": "All status",
+      "durationDays_one": "{{count}} day",
+      "durationDays_other": "{{count}} days",
+      "confirmTitle": "Confirm reservation?",
+      "rejectTitle": "Reject reservation?",
+      "confirm": "Confirm",
+      "reject": "Reject",
+      "actionFailed": "Action failed",
+      "noZone": "No Zone",
+      "noType": "No Type",
+      "table": {
+        "client": "Client",
+        "billboard": "Billboard",
+        "city": "City",
+        "startDate": "Start Date",
+        "duration": "Duration",
+        "price": "Price",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "billboards": {
+      "eyebrow": "Admin catalog",
+      "addTitle": "Add New Billboard",
+      "updateTitle": "Update Billboard",
+      "createHeading": "Create billboard",
+      "editHeading": "Edit billboard details",
+      "createDescription": "Add a new billboard to the public catalog.",
+      "editDescription": "Update the selected billboard information and save changes.",
+      "cancelEdit": "Cancel edit",
+      "saveButton": "Save Billboard",
+      "updateButton": "Update Billboard",
+      "database": "Database",
+      "manageTitle": "Manage Billboards",
+      "manageDescription": "Update or delete billboard cards that already exist in the catalog.",
+      "refresh": "Refresh list",
+      "loading": "Loading billboards...",
+      "empty": "No billboards found.",
+      "deleteTitle": "Delete billboard?",
+      "deleteText": "This will remove \"{{title}}\" from the catalog.",
+      "form": {
+        "title": "Title",
+        "titlePlaceholder": "Billboard Title",
+        "city": "City",
+        "cityPlaceholder": "City Name",
+        "zone": "Zone / Location",
+        "zonePlaceholder": "Zone Name",
+        "type": "Type",
+        "size": "Size",
+        "sizePlaceholder": "Billboard Size",
+        "price": "Price (MAD)",
+        "pricePlaceholder": "Billboard Price",
+        "availability": "Availability",
+        "image": "Billboard Image",
+        "upload": "Click to select billboard image",
+        "currentFile": "Current"
+      },
+      "types": {
+        "classic": "Classic",
+        "digital": "Digital"
+      },
+      "messages": {
+        "loadError": "Could not load billboards",
+        "imageRequired": "Please select a billboard image",
+        "added": "Billboard added successfully!",
+        "updated": "Billboard updated successfully!",
+        "deleted": "Billboard deleted successfully!",
+        "deleteError": "Could not delete billboard"
+      }
+    },
+    "users": {
+      "title": "User Management",
+      "search": "Search by name or email...",
+      "totalUsers": "Total Users",
+      "admins": "Admins",
+      "editRole": "Edit Role",
+      "editRoleTitle": "Edit user role",
+      "editRoleText": "Choose a new role for {{name}}",
+      "updateRole": "Update role",
+      "chooseRole": "Please choose a role",
+      "roleUpdated": "User role has been updated.",
+      "deleteWarning": "You won't be able to revert this!",
+      "deleted": "User has been deleted.",
+      "table": {
+        "user": "User",
+        "email": "Email",
+        "role": "Role",
+        "actions": "Actions"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Manage your admin profile, security, and dashboard preferences.",
+      "signedInAs": "Signed in as",
+      "unavailable": "Settings unavailable",
+      "loadError": "Could not load admin settings.",
+      "nameEmailRequired": "Name and email are required.",
+      "profileSaved": "Admin profile updated successfully.",
+      "profileNotSaved": "Profile not saved",
+      "profileCheck": "Please check your profile details.",
+      "fillPassword": "Fill in the password fields first.",
+      "weakPassword": "Weak password",
+      "passwordLength": "New password must be at least 6 characters.",
+      "passwordMismatch": "Password mismatch",
+      "passwordMismatchText": "New password and confirmation do not match.",
+      "passwordSaved": "Password updated successfully.",
+      "passwordNotChanged": "Password not changed",
+      "verifyPassword": "Please verify your current password.",
+      "preferencesSaved": "Dashboard preferences updated successfully.",
+      "preferencesNotSaved": "Preferences not saved",
+      "preferencesError": "Could not save dashboard preferences.",
+      "logoutTitle": "Log out?",
+      "logoutText": "You will need to sign in again to access the admin dashboard.",
+      "health": {
+        "adminAccess": "Admin access",
+        "protectedRoute": "Protected route active",
+        "timezone": "Timezone",
+        "databaseSync": "Database sync",
+        "preferencesSaved": "Preferences saved on your admin account"
+      },
+      "profile": {
+        "title": "Profile",
+        "description": "Keep account information clean and visible.",
+        "fullName": "Full name",
+        "email": "Email address",
+        "phone": "Phone number",
+        "role": "Role",
+        "save": "Save profile"
+      },
+      "security": {
+        "title": "Security",
+        "description": "Change your password securely from the admin dashboard.",
+        "currentPassword": "Current password",
+        "newPassword": "New password",
+        "confirmPassword": "Confirm new password",
+        "change": "Change password"
+      },
+      "preferences": {
+        "title": "Dashboard Preferences",
+        "description": "Control alerts, reports, language, and display context.",
+        "emailNotifications": "Email notifications",
+        "emailNotificationsDesc": "Receive important admin updates by email.",
+        "reservationAlerts": "Reservation alerts",
+        "reservationAlertsDesc": "Highlight new booking requests in the dashboard.",
+        "weeklyReports": "Weekly reports",
+        "weeklyReportsDesc": "Summaries for revenue, clients, and billboards.",
+        "timezone": "Timezone",
+        "save": "Save preferences"
+      }
+    }
+  },
+  
+  "footer": {
+    "description": "The best advertising solutions in Morocco to grow your brand.",
+    "links_title": "Quick Links",
+    "links": {
+      "home": "Home",
+      "contact": "Contact",
+      "login": "Login"
+    },
+    "contact_title": "Contact",
+    "address": "Dar Bouazza, Casablanca",
+    "copyright": "© 2026 AtlasAds. Created by Ismail."
+  }
+
+}

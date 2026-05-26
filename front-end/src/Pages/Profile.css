@@ -1,0 +1,633 @@
+.profile-page {
+  min-height: 100vh;
+  padding: 48px 24px 72px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(249, 115, 22, 0.08) 0%, transparent 34%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 48%, #f8fafc 100%);
+  color: #0f172a;
+  font-family: "Inter", sans-serif;
+}
+
+.profile-hero,
+.reservations-section {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.profile-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+.profile-identity,
+.profile-stats,
+.reservations-section,
+.profile-state {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
+}
+
+.profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.profile-avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #111827 0%, #1d2c6c 100%);
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 900;
+  box-shadow: 0 16px 24px rgba(17, 24, 39, 0.18);
+}
+
+.profile-eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 8px;
+  color: #f97316;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.profile-identity h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.05;
+  font-weight: 900;
+}
+
+.profile-identity p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #64748b;
+  font-size: 0.98rem;
+  overflow-wrap: anywhere;
+}
+
+.profile-identity p svg {
+  color: #f97316;
+  flex-shrink: 0;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 16px;
+  gap: 12px;
+}
+
+.stat-box {
+  min-height: 126px;
+  padding: 18px 14px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-box svg {
+  color: #f97316;
+  margin-bottom: 12px;
+}
+
+.stat-box span {
+  color: #0f172a;
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.stat-box p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.reservations-section {
+  padding: 26px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  font-weight: 900;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 780px;
+}
+
+.profile-table th {
+  padding: 16px 18px;
+  background: #f8fafc;
+  text-align: left;
+  font-size: 0.78rem;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.profile-table td {
+  padding: 18px;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 0.95rem;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.profile-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.profile-table tbody tr:hover {
+  background: #fff7ed;
+}
+
+.profile-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.billboard-name {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.price-text {
+  color: #0f172a;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 92px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #fff7ed;
+  color: #c2410c;
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.status-tag.confirmed,
+.status-tag.approved,
+.status-tag.paid {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-tag.cancelled,
+.status-tag.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-tag.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.pdf-btn {
+  min-width: 94px;
+  border: none;
+  border-radius: 10px;
+  background: #f97316;
+  color: #ffffff;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pdf-btn:hover {
+  background: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(249, 115, 22, 0.22);
+}
+
+.profile-state {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 34px 20px;
+  text-align: center;
+  color: #64748b;
+  box-shadow: none;
+}
+
+.profile-state svg {
+  color: #f97316;
+}
+
+.profile-state h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.25rem;
+}
+
+.profile-state p {
+  margin: 0;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.error-state {
+  border-color: #fecaca;
+  background: #fff7f7;
+  color: #991b1b;
+}
+
+.profile-spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #ffedd5;
+  border-top-color: #f97316;
+  border-radius: 999px;
+  animation: profileSpin 0.8s linear infinite;
+}
+
+@keyframes profileSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 920px) {
+  .profile-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-page {
+    padding: 28px 14px 54px;
+  }
+
+  .profile-identity {
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .profile-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    font-size: 1.25rem;
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box {
+    min-height: 96px;
+  }
+
+  .reservations-section {
+    padding: 20px 14px;
+  }
+
+  .table-container {
+    border: none;
+    overflow: visible;
+  }
+
+  .profile-table,
+  .profile-table thead,
+  .profile-table tbody,
+  .profile-table th,
+  .profile-table td,
+  .profile-table tr {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .profile-table thead {
+    display: none;
+  }
+
+  .profile-table tr {
+    margin-bottom: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .profile-table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 16px;
+    text-align: right;
+  }
+
+  .profile-table td::before {
+    content: attr(data-label);
+    color: #64748b;
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .pdf-btn {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 440px) {
+  .profile-identity {
+    flex-direction: column;
+  }
+
+  .profile-table td {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 8px;
+  }
+
+  .pdf-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.type-text, .size-text {
+  font-weight: 600;
+  color: #475569; 
+  font-size: 0.88rem;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px; 
+}
+
+.billboard-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.billboard-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #64748b; 
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.billboard-location svg {
+  color: #f97316; 
+}
+
+.action-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.cancel-btn {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancel-btn:hover {
+  background-color: #dc2626; 
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+.cancel-btn:active {
+  transform: scale(0.96); 
+}
+
+
+.pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  font-size: 13px;
+  
+}
+
+@media (max-width: 768px) {
+  .action-wrapper {
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+/* ========================= */
+/* TABLE -> CARDS (MOBILE) */
+/* ========================= */
+@media (max-width: 700px) {
+  .profile-page {
+    padding: 24px 12px 50px;
+  }
+
+  .profile-hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .profile-identity {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .profile-avatar {
+    width: 65px;
+    height: 65px;
+    font-size: 1.2rem;
+  }
+
+  .profile-identity h1 {
+    font-size: 1.4rem;
+  }
+
+  .profile-identity p {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-box {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .reservations-section {
+    padding: 16px;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .table-container {
+    overflow: visible;
+    border: none;
+  }
+
+  .profile-table thead {
+    display: none;
+  }
+
+  .profile-table,
+  .profile-table tbody,
+  .profile-table tr,
+  .profile-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .profile-table {
+    min-width: unset;
+  }
+
+
+  .profile-table tr {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    padding: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  .profile-table tr:hover {
+    background: white;
+  }
+
+
+  .profile-table td {
+    border: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    text-align: right;
+    white-space: normal;
+  }
+
+  .profile-table td::before {
+    content: attr(data-label);
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+ 
+  .billboard-info {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .billboard-location {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+
+  .action-wrapper {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .pdf-btn,
+  .cancel-btn {
+    min-width: 100px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+

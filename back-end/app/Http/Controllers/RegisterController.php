@@ -11,7 +11,7 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         // ///////////////////
-        // Validation Form //
+        // Validation Form  //
         // ///////////////////
         $request->validate([
             'name' => 'required|string|max:255',
@@ -20,7 +20,7 @@ class RegisterController extends Controller
         ]);
 
         // /////////////////////
-        // Register for User //
+        // Register for User  //
         // /////////////////////
         $user = User::create([
             'name' => $request->name,
@@ -29,7 +29,7 @@ class RegisterController extends Controller
         ]);
 
         // ///////////////////////
-        // Response If Success //
+        // Response If Success  //
         // ///////////////////////
         return response()->json([
             'message' => 'User registered successfully',

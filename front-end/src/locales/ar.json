@@ -1,0 +1,510 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "billboards": "اللوحات الإعلانية",
+    "contact": "اتصل بنا",
+    "profile": "الملف الشخصي",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج"
+  },
+
+  "home": {
+    "hero": {
+      "title_part1": "نموك يبدأ مع",
+      "description": "المنصة المثالية لإدارة وتتبع وعرض حملاتك الإعلانية بدقة وأناقة. ارتقِ بعلامتك التجارية اليوم.",
+      "btn_reserve": "احجز لوحة الآن",
+      "btn_explore": "استكشف اللوحات",
+      "floating_location": "شارع محمد الخامس",
+      "floating_zone": "منطقة ممتازة"
+    },
+    "how_it_works": {
+      "title_part1": "كيف",
+      "title_part2": "تعمل المنصة؟",
+      "description": "احجز مساحتك الإعلانية في ثلاث خطوات بسيطة فقط. بدون تعقيدات أو رسوم خفية.",
+      "step1_title": "اختر مدينة",
+      "step1_desc": "اختر من بين المدن الكبرى في المغرب حيث تريد لعلامتك أن تظهر.",
+      "step2_title": "اختر المنطقة واللوحة",
+      "step2_desc": "تصفح المناطق الاستراتيجية واختر اللوحة المثالية لحملتك.",
+      "step3_title": "أرسل طلب الحجز",
+      "step3_desc": "قدم طلبك وسيتصل بك فريقنا لإتمام عملية الحجز."
+    },
+    "cities": {
+      "title": "مدن مختارة",
+      "description": "استكشف المواقع المتميزة في المراكز الاقتصادية بالمغرب.",
+      "view_all": "عرض جميع",
+      "cities_span": "المدن"
+    },
+    "features": {
+      "title_part1": "لماذا تختار",
+      "subtitle": "المنصة المتكاملة للإعلان الخارجي في المغرب.",
+      "feat1_title": "إحصائيات مباشرة",
+      "feat1_desc": "تتبع أداء لوحاتك ببيانات حية ورسوم بيانية ذكية.",
+      "feat2_title": "تغطية واسعة",
+      "feat2_desc": "الوصول إلى أفضل المواقع في جميع أنحاء البلاد لعلامتك التجارية.",
+      "feat3_title": "إدارة آمنة",
+      "feat3_desc": "حملاتك محمية بنظامنا الأمني عالي المستوى."
+    },
+    "testimonials": {
+      "badge": "آراء العملاء",
+      "title_part1": "هم",
+      "title_part2": "يثقون",
+      "title_part3": "بنا",
+      "subtitle": "شركات مغربية عززت ظهورها مع AtlasAds"
+    },
+    "stats": {
+      "billboards": "لوحة متاحة",
+      "cities": "مدن مغطاة",
+      "satisfied": "عملاء راضون",
+      "campaigns": "حملة منجزة"
+    },
+    "cta": {
+      "title_part1": "هل أنت مستعد لتعزيز",
+      "title_part2": "ظهور علامتك؟",
+      "description": "انضم إلى مئات الشركات المغربية وابدأ حملتك الإعلانية اليوم مع AtlasAds.",
+      "btn_start": "ابدأ حملتك الآن",
+      "btn_contact": "اتصل بالمبيعات"
+    }
+  },
+
+  "contact": {
+    "title": "تواصل معنا",
+    "subtitle": "هل لديك أسئلة حول لوحاتنا الإعلانية؟ فريقنا هنا لمساعدتك على تطوير علامتك التجارية.",
+
+    "info": {
+      "headquarters": "المقر الرئيسي",
+      "location": "دار بوعزة، الدار البيضاء، المغرب",
+      "phone": "الهاتف",
+      "email": "البريد الإلكتروني"
+    },
+
+    "form": {
+      "fullname": "الاسم الكامل",
+      "fullnamePlaceholder": "أدخل اسمك الكامل",
+      "email": "عنوان البريد الإلكتروني",
+      "message": "رسالتك",
+      "messagePlaceholder": "كيف يمكننا مساعدتك اليوم؟",
+      "sendBtn": "إرسال الرسالة",
+      "sendingBtn": "جارٍ الإرسال..."
+    },
+
+    "status": {
+      "sending": "جارٍ إرسال رسالتك...",
+      "success": "شكراً! تم إرسال رسالتك بنجاح.",
+      "error": "خطأ في الاتصال. حاول مرة أخرى لاحقاً."
+    }
+  },
+
+  "login": {
+    "left": {
+      "title": "مرحبًا بعودتك إلى",
+      "subtitle": "سجل الدخول لإدارة حجوزات اللوحات الإعلانية والحملات في جميع أنحاء المغرب.",
+      "footer": "© 2026 AtlasAds. جميع الحقوق محفوظة."
+    },
+
+    "right": {
+      "title": "تسجيل الدخول",
+      "subtitle": "أدخل بياناتك للوصول إلى حسابك"
+    },
+
+    "form": {
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "loginBtn": "تسجيل الدخول",
+      "loadingBtn": "جارٍ تسجيل الدخول..."
+    },
+
+    "register": {
+      "text": "ليس لديك حساب؟",
+      "link": "سجل هنا"
+    },
+
+    "backHome": "العودة للرئيسية",
+
+    "errors": {
+      "server": "مشكلة في الاتصال بالخادم. حاول لاحقًا.",
+      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+      "validation": "يرجى إدخال بريد إلكتروني وكلمة مرور صالحين.",
+      "general": "حدث خطأ ما. حاول مرة أخرى لاحقًا."
+    }
+  },
+
+  "register": {
+    "join": "انضم إلى",
+    "desc": "أنشئ حسابًا لإدارة حجوزات اللوحات الإعلانية الخاصة بك في المغرب.",
+    "footer": "© 2026 AtlasAds. جميع الحقوق محفوظة.",
+    "signUp": "إنشاء حساب",
+    "subtitle": "أدخل معلوماتك لإنشاء حسابك",
+    "success": "تم إنشاء الحساب! جاري التحويل إلى تسجيل الدخول...",
+    "fullName": "الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "signingUp": "جاري التسجيل...",
+    "haveAccount": "لديك حساب بالفعل؟",
+    "loginHere": "سجل الدخول هنا",
+    "backHome": "العودة للرئيسية"
+  },
+
+"profile": {
+  "myAccount": "حسابي",
+  "emailNotFound": "البريد الإلكتروني غير موجود",
+  "reservations": "الحجوزات",
+  "confirmed": "المؤكدة",
+  "totalSpent": "إجمالي المصروف",
+  "history": "سجل الحجوزات",
+  "bookings": "حجوزات اللوحات الإعلانية الخاصة بك",
+  "loadingReservations": "جاري تحميل حجوزاتك...",
+  "noReservations": "لا توجد حجوزات بعد",
+  "noReservationsDesc": "ستظهر حجوزاتك هنا بعد القيام بحجز.",
+  "billboard": "اللوحة الإعلانية",
+  "type": "النوع",
+  "size": "الحجم",
+  "startDate": "تاريخ البداية",
+  "endDate": "تاريخ النهاية",
+  "price": "السعر",
+  "status": "الحالة",
+  "action": "الإجراء",
+  "cancel": "إلغاء",
+  "pdf": "PDF",
+  "loadError": "تعذر تحميل حجوزاتك حالياً.",
+  "generatingPdf": "جاري إنشاء ملف PDF...",
+  "invalidFile": "صيغة الملف غير صالحة",
+  "downloadSuccess": "تم التحميل بنجاح",
+  "serverError": "خطأ في الخادم. حاول لاحقاً.",
+  "areYouSure": "هل أنت متأكد؟",
+  "cancelWarning": "لن تتمكن من التراجع عن هذا الإجراء!",
+  "confirmCancel": "نعم، قم بالإلغاء!",
+  "cancelled": "تم الإلغاء!",
+  "cancelSuccess": "تم إلغاء الحجز بنجاح.",
+  "error": "خطأ!",
+  "somethingWrong": "حدث خطأ ما."
+},
+
+  "reservation": {
+    "loading": "جاري التحميل...",
+    "notFound": "لم يتم العثور على اللوحة الإعلانية",
+    "backCatalog": "الرجوع إلى الكتالوج",
+    "screen": "شاشة",
+    "perMonth": "/الشهر",
+
+    "steps": {
+      "select": "اختيار",
+      "details": "التفاصيل",
+      "payment": "الدفع",
+      "success": "نجاح"
+    },
+    "clientDetails": "معلومات العميل",
+    "companyName": "اسم الشركة",
+    "optional": "اختياري",
+    "phone": "رقم الهاتف",
+    "startDate": "تاريخ البداية",
+    "endDate": "تاريخ النهاية",
+    "continuePayment": "المتابعة للدفع",
+
+    "finalize": "إكمال الحجز",
+    "imageOnly": "صورة فقط",
+    "videoOnly": "فيديو فقط",
+    "imageVideo": "صورة أو فيديو",
+    "uploadCreative": "اضغط لرفع الملف الإعلاني",
+
+    "total": "المجموع المتوقع:",
+    "duration": "المدة:",
+    "days": "أيام",
+
+    "back": "رجوع",
+    "confirm": "تأكيد",
+
+    "confirmedTitle": "تم تأكيد الحجز!",
+    "confirmedText": "تم إرسال حجز اللوحة الإعلانية بنجاح.",
+    "backHome": "الرجوع للرئيسية",
+    "downloadReceipt": "تحميل الوصل",
+
+    "requiredFields": "يرجى ملء جميع الحقول المطلوبة",
+    "uploadRequired": "يرجى رفع التصميم الإعلاني",
+    "submissionFailed": "فشل الإرسال",
+    "uploadText": "قم برفع المحتوى الإعلاني الخاص بك"
+  },
+
+  "billboards": {
+    "title": "المساحات الإعلانية",
+    "subtitle": "اعثر على أفضل موقع إعلاني في المغرب.",
+    "cityLocation": "المدينة",
+    "zone": "المنطقة",
+    "panelType": "نوع اللوحة",
+    "size": "الحجم",
+    "priceRange": "السعر",
+
+    "allCities": "كل المدن",
+    "allZones": "كل المناطق",
+    "allTypes": "كل الأنواع",
+    "allSizes": "كل الأحجام",
+
+    "classic": "لوحة كلاسيكية",
+    "digital": "شاشة رقمية",
+    "led": "شاشة LED",
+
+    "small": "صغير",
+    "medium": "متوسط",
+    "large": "كبير",
+
+    "loading": "جاري التحميل...",
+    "viewDetails": "عرض التفاصيل",
+    "booked": "محجوز",
+    "viewAll": "عرض المزيد",
+    "noResults": "لا توجد لوحات مطابقة.",
+    "loginFirst": "سجل الدخول أولاً",
+
+    "available": "متاح",
+    "unavailable": "غير متاح",
+    "highDemand": "طلب مرتفع",
+
+    "perMonth": "/شهر"
+  },
+
+  "dashboard": {
+    "common": {
+      "admin": "مشرف",
+      "adminPanel": "لوحة التحكم",
+      "areYouSure": "هل أنت متأكد؟",
+      "back": "رجوع",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "deleteConfirm": "نعم، احذف",
+      "deleted": "تم الحذف!",
+      "error": "خطأ",
+      "language": "اللغة",
+      "logout": "تسجيل الخروج",
+      "missingInfo": "معلومات ناقصة",
+      "next": "التالي",
+      "noData": "لا توجد بيانات",
+      "of": "من",
+      "page": "الصفحة",
+      "previous": "السابق",
+      "saved": "تم الحفظ",
+      "saving": "جار الحفظ...",
+      "somethingWrong": "حدث خطأ ما.",
+      "unknown": "غير معروف",
+      "update": "تعديل",
+      "updated": "تم التحديث!",
+      "viewAll": "عرض الكل"
+    },
+    "languages": {
+      "english": "الإنجليزية",
+      "french": "الفرنسية",
+      "arabic": "العربية"
+    },
+    "status": {
+      "available": "متاح",
+      "cancelled": "ملغى",
+      "confirmed": "مؤكد",
+      "pending": "قيد الانتظار",
+      "rejected": "مرفوض",
+      "unavailable": "غير متاح"
+    },
+    "roles": {
+      "admin": "مشرف",
+      "client": "عميل"
+    },
+    "notifications": {
+      "title": "الإشعارات",
+      "empty": "لا توجد تحديثات جديدة",
+      "markAllRead": "تحديد الكل كمقروء",
+      "newReservation": "حجز جديد من {{client}} للوحة \"{{billboard}}\""
+    },
+    "sidebar": {
+      "openMenu": "فتح القائمة",
+      "closeMenu": "إغلاق القائمة",
+      "dashboard": "لوحة التحكم",
+      "billboards": "اللوحات",
+      "reservations": "الحجوزات",
+      "users": "المستخدمون",
+      "settings": "الإعدادات"
+    },
+    "overview": {
+      "title": "لوحة التحكم",
+      "addBillboard": "إضافة لوحة",
+      "stats": {
+        "totalBillboards": "إجمالي اللوحات",
+        "activeReservations": "الحجوزات النشطة",
+        "monthlyRevenue": "الدخل الشهري",
+        "totalUsers": "إجمالي المستخدمين"
+      },
+      "charts": {
+        "revenue": "نظرة عامة على الدخل الشهري",
+        "types": "أنواع اللوحات"
+      }
+    },
+    "contacts": {
+      "kicker": "رسائل التواصل",
+      "title": "تواصل المستخدمين",
+      "search": "ابحث بالاسم أو البريد أو الرسالة...",
+      "empty": "لا توجد رسائل تواصل"
+    },
+    "reservations": {
+      "title": "الحجوزات",
+      "search": "ابحث عن عميل أو مدينة أو نوع...",
+      "allStatus": "كل الحالات",
+      "durationDays_one": "{{count}} يوم",
+      "durationDays_other": "{{count}} أيام",
+      "confirmTitle": "تأكيد الحجز؟",
+      "rejectTitle": "رفض الحجز؟",
+      "confirm": "تأكيد",
+      "reject": "رفض",
+      "actionFailed": "فشل الإجراء",
+      "noZone": "لا توجد منطقة",
+      "noType": "لا يوجد نوع",
+      "table": {
+        "client": "العميل",
+        "billboard": "اللوحة",
+        "city": "المدينة",
+        "startDate": "تاريخ البداية",
+        "duration": "المدة",
+        "price": "السعر",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "billboards": {
+      "eyebrow": "كتالوج المشرف",
+      "addTitle": "إضافة لوحة جديدة",
+      "updateTitle": "تحديث اللوحة",
+      "createHeading": "إنشاء لوحة",
+      "editHeading": "تعديل تفاصيل اللوحة",
+      "createDescription": "أضف لوحة جديدة إلى الكتالوج العام.",
+      "editDescription": "حدّث معلومات اللوحة المحددة واحفظ التغييرات.",
+      "cancelEdit": "إلغاء التعديل",
+      "saveButton": "حفظ اللوحة",
+      "updateButton": "تحديث اللوحة",
+      "database": "قاعدة البيانات",
+      "manageTitle": "إدارة اللوحات",
+      "manageDescription": "عدّل أو احذف اللوحات الموجودة في الكتالوج.",
+      "refresh": "تحديث القائمة",
+      "loading": "جار تحميل اللوحات...",
+      "empty": "لا توجد لوحات.",
+      "deleteTitle": "حذف اللوحة؟",
+      "deleteText": "سيتم حذف \"{{title}}\" من الكتالوج.",
+      "form": {
+        "title": "العنوان",
+        "titlePlaceholder": "عنوان اللوحة",
+        "city": "المدينة",
+        "cityPlaceholder": "اسم المدينة",
+        "zone": "المنطقة / الموقع",
+        "zonePlaceholder": "اسم المنطقة",
+        "type": "النوع",
+        "size": "الحجم",
+        "sizePlaceholder": "حجم اللوحة",
+        "price": "السعر (MAD)",
+        "pricePlaceholder": "سعر اللوحة",
+        "availability": "التوفر",
+        "image": "صورة اللوحة",
+        "upload": "اضغط لاختيار صورة اللوحة",
+        "currentFile": "الحالي"
+      },
+      "types": {
+        "classic": "كلاسيكي",
+        "digital": "رقمي"
+      },
+      "messages": {
+        "loadError": "تعذر تحميل اللوحات",
+        "imageRequired": "يرجى اختيار صورة للوحة",
+        "added": "تمت إضافة اللوحة بنجاح!",
+        "updated": "تم تحديث اللوحة بنجاح!",
+        "deleted": "تم حذف اللوحة بنجاح!",
+        "deleteError": "تعذر حذف اللوحة"
+      }
+    },
+    "users": {
+      "title": "إدارة المستخدمين",
+      "search": "ابحث بالاسم أو البريد...",
+      "totalUsers": "إجمالي المستخدمين",
+      "admins": "المشرفون",
+      "editRole": "تعديل الدور",
+      "editRoleTitle": "تعديل دور المستخدم",
+      "editRoleText": "اختر دورا جديدا لـ {{name}}",
+      "updateRole": "تحديث الدور",
+      "chooseRole": "يرجى اختيار دور",
+      "roleUpdated": "تم تحديث دور المستخدم.",
+      "deleteWarning": "لن تتمكن من التراجع عن هذا الإجراء!",
+      "deleted": "تم حذف المستخدم.",
+      "table": {
+        "user": "المستخدم",
+        "email": "البريد",
+        "role": "الدور",
+        "actions": "الإجراءات"
+      }
+    },
+    "settings": {
+      "title": "الإعدادات",
+      "subtitle": "أدر ملفك كمشرف والأمان وتفضيلات لوحة التحكم.",
+      "signedInAs": "مسجل الدخول باسم",
+      "unavailable": "الإعدادات غير متاحة",
+      "loadError": "تعذر تحميل إعدادات المشرف.",
+      "nameEmailRequired": "الاسم والبريد الإلكتروني مطلوبان.",
+      "profileSaved": "تم تحديث ملف المشرف بنجاح.",
+      "profileNotSaved": "لم يتم حفظ الملف",
+      "profileCheck": "يرجى التحقق من معلومات الملف.",
+      "fillPassword": "املأ حقول كلمة المرور أولا.",
+      "weakPassword": "كلمة المرور ضعيفة",
+      "passwordLength": "يجب أن تتكون كلمة المرور الجديدة من 6 أحرف على الأقل.",
+      "passwordMismatch": "كلمتا المرور غير متطابقتين",
+      "passwordMismatchText": "كلمة المرور الجديدة والتأكيد غير متطابقين.",
+      "passwordSaved": "تم تحديث كلمة المرور بنجاح.",
+      "passwordNotChanged": "لم يتم تغيير كلمة المرور",
+      "verifyPassword": "يرجى التحقق من كلمة المرور الحالية.",
+      "preferencesSaved": "تم تحديث تفضيلات لوحة التحكم.",
+      "preferencesNotSaved": "لم يتم حفظ التفضيلات",
+      "preferencesError": "تعذر حفظ تفضيلات لوحة التحكم.",
+      "logoutTitle": "تسجيل الخروج؟",
+      "logoutText": "ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى لوحة التحكم.",
+      "health": {
+        "adminAccess": "صلاحية المشرف",
+        "protectedRoute": "المسار المحمي نشط",
+        "timezone": "المنطقة الزمنية",
+        "databaseSync": "مزامنة قاعدة البيانات",
+        "preferencesSaved": "التفضيلات محفوظة في حساب المشرف"
+      },
+      "profile": {
+        "title": "الملف الشخصي",
+        "description": "حافظ على معلومات الحساب واضحة ومحدثة.",
+        "fullName": "الاسم الكامل",
+        "email": "البريد الإلكتروني",
+        "phone": "رقم الهاتف",
+        "role": "الدور",
+        "save": "حفظ الملف"
+      },
+      "security": {
+        "title": "الأمان",
+        "description": "غيّر كلمة المرور بأمان من لوحة التحكم.",
+        "currentPassword": "كلمة المرور الحالية",
+        "newPassword": "كلمة المرور الجديدة",
+        "confirmPassword": "تأكيد كلمة المرور الجديدة",
+        "change": "تغيير كلمة المرور"
+      },
+      "preferences": {
+        "title": "تفضيلات لوحة التحكم",
+        "description": "تحكم في التنبيهات والتقارير واللغة وسياق العرض.",
+        "emailNotifications": "إشعارات البريد",
+        "emailNotificationsDesc": "استقبل تحديثات المشرف المهمة عبر البريد.",
+        "reservationAlerts": "تنبيهات الحجز",
+        "reservationAlertsDesc": "إبراز طلبات الحجز الجديدة في لوحة التحكم.",
+        "weeklyReports": "تقارير أسبوعية",
+        "weeklyReportsDesc": "ملخصات للدخل والعملاء واللوحات.",
+        "timezone": "المنطقة الزمنية",
+        "save": "حفظ التفضيلات"
+      }
+    }
+  },
+
+  "footer": {
+    "description": "أفضل الحلول الإعلانية في المغرب لتطوير علامتكم التجارية.",
+    "links_title": "روابط سريعة",
+    "links": {
+      "home": "الرئيسية",
+      "contact": "اتصل بنا",
+      "login": "تسجيل الدخول"
+    },
+    "contact_title": "اتصل بنا",
+    "address": "دار بوعزة، الدار البيضاء",
+    "copyright": "© 2026 AtlasAds. تم التطوير من طرف إسماعيل."
+  }
+}

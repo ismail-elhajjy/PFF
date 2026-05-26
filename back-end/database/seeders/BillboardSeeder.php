@@ -14,13 +14,13 @@ class BillboardSeeder extends Seeder
     public function run(): void
     {
         DB::table('billboards')->insert([
-            'title' => 'Premium',
-            'city' => 'Marrakech',
-            'zone' => 'Medina',
+            'title' => 'Atlas',
+            'city' => 'Tanger',
+            'zone' => 'Malabata',
             'type' => 'Classic',
-            'size' => 'Medium',
-            'image' => 'MarrakechCity.jpg',
-            'price' => 50.000,
+            'size' => 'Large',
+            'image' => 'TangerCity.jpg',
+            'price' => 10.000,
             'is_available' => true
         ]);
     }

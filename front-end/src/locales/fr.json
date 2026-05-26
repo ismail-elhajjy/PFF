@@ -1,0 +1,548 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "billboards": "Panneaux",
+    "contact": "Contact",
+    "profile": "Profil",
+    "login": "Connexion",
+    "logout": "Déconnexion"
+  }
+,
+ 
+  "home": {
+    "hero": {
+      "title_part1": "Votre croissance commence avec",
+      "description": "La plateforme ultime pour gérer, suivre et présenter vos campagnes d'affichage avec précision et style.",
+      "btn_reserve": "Réserver un panneau",
+      "btn_explore": "Explorer les panneaux",
+      "floating_location": "Boulevard Mohammed V",
+      "floating_zone": "Zone Premium"
+    },
+    "how_it_works": {
+      "title_part1": "Comment ça",
+      "title_part2": "marche",
+      "description": "Réservez votre espace publicitaire en trois étapes simples. Pas de processus complexe.",
+      "step1_title": "Choisir une ville",
+      "step1_desc": "Sélectionnez parmi les grandes villes du Maroc où vous voulez être vu.",
+      "step2_title": "Sélectionner Zone & Panneau",
+      "step2_desc": "Parcourez les zones stratégiques et choisissez le panneau parfait.",
+      "step3_title": "Envoyer la demande",
+      "step3_desc": "Soumettez votre demande et notre équipe vous contactera pour finaliser."
+    },
+    "cities": {
+      "title": "Villes en vedette",
+      "description": "Explorez des emplacements premium dans les pôles économiques du Maroc.",
+      "view_all": "Voir toutes les",
+      "cities_span": "Villes"
+    },
+    "features": {
+      "title_part1": "Pourquoi choisir",
+      "subtitle": "La plateforme complète pour l'affichage extérieur au Maroc.",
+      "feat1_title": "Stats en temps réel",
+      "feat1_desc": "Suivez vos performances avec des données en direct et des graphiques intelligents.",
+      "feat2_title": "Large couverture",
+      "feat2_desc": "Accédez aux meilleurs emplacements à travers tout le pays.",
+      "feat3_title": "Gestion sécurisée",
+      "feat3_desc": "Vos campagnes sont protégées par notre système de haute sécurité."
+    },
+    "testimonials": {
+      "badge": "TÉMOIGNAGES CLIENTS",
+      "title_part1": "Ils nous font",
+      "title_part2": "confiance",
+      "title_part3": "",
+      "subtitle": "Les entreprises marocaines qui ont boosté leur visibilité avec AtlasAds"
+    },
+    "stats": {
+      "billboards": "Panneaux disponibles",
+      "cities": "Villes couvertes",
+      "satisfied": "Clients satisfaits",
+      "campaigns": "Campagnes réalisées"
+    },
+    "cta": {
+      "title_part1": "Prêt à booster votre",
+      "title_part2": "visibilité ?",
+      "description": "Rejoignez des centaines d'entreprises et commencez votre campagne aujourd'hui.",
+      "btn_start": "Lancer votre campagne",
+      "btn_contact": "Contactez l'équipe"
+    }
+  }
+  ,
+
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez des questions sur nos panneaux publicitaires ? Notre équipe est là pour vous aider à développer votre marque.",
+
+    "info": {
+      "headquarters": "Siège",
+      "location": "Dar Bouazza, Casablanca, Maroc",
+      "phone": "Téléphone",
+      "email": "Email"
+    },
+
+    "form": {
+      "fullname": "Nom complet",
+      "fullnamePlaceholder": "Entrez votre nom complet",
+      "email": "Adresse email",
+      "message": "Votre message",
+      "messagePlaceholder": "Comment pouvons-nous vous aider aujourd'hui ?",
+      "sendBtn": "Envoyer",
+      "sendingBtn": "Envoi..."
+    },
+
+    "status": {
+      "sending": "Envoi de votre message...",
+      "success": "Merci ! Votre message a été envoyé avec succès.",
+      "error": "Erreur de connexion. Veuillez réessayer plus tard."
+    }
+  }
+,
+
+  "login": {
+    "left": {
+      "title": "Bon retour sur",
+      "subtitle": "Connectez-vous pour gérer vos réservations et campagnes publicitaires au Maroc.",
+      "footer": "© 2026 AtlasAds. Tous droits réservés."
+    },
+
+    "right": {
+      "title": "Connexion",
+      "subtitle": "Entrez vos informations pour accéder à votre compte"
+    },
+
+    "form": {
+      "email": "Adresse email",
+      "password": "Mot de passe",
+      "loginBtn": "Se connecter",
+      "loadingBtn": "Connexion..."
+    },
+
+    "register": {
+      "text": "Vous n'avez pas de compte ?",
+      "link": "Inscrivez-vous ici"
+    },
+
+    "backHome": "Retour à l'accueil",
+
+    "errors": {
+      "server": "Problème de connexion au serveur. Réessayez plus tard.",
+      "invalidCredentials": "Email ou mot de passe incorrect.",
+      "validation": "Veuillez fournir un email et mot de passe valides.",
+      "general": "Une erreur est survenue. Réessayez plus tard."
+    }
+  }
+,
+
+  "register": {
+    "join": "Rejoignez",
+    "desc": "Créez un compte pour gérer vos réservations de panneaux publicitaires au Maroc.",
+    "footer": "© 2026 AtlasAds. Tous droits réservés.",
+    "signUp": "S'inscrire",
+    "subtitle": "Entrez vos informations pour créer votre compte",
+    "success": "Compte créé ! Redirection vers la connexion...",
+    "fullName": "Nom complet",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "signingUp": "Inscription...",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "loginHere": "Connectez-vous ici",
+    "backHome": "Retour à l'accueil"
+  }
+,
+
+"profile": {
+  "myAccount": "Mon compte",
+  "emailNotFound": "Email introuvable",
+  "reservations": "Réservations",
+  "confirmed": "Confirmées",
+  "totalSpent": "Total dépensé",
+  "history": "Historique des réservations",
+  "bookings": "Vos réservations de panneaux",
+  "loadingReservations": "Chargement de vos réservations...",
+  "noReservations": "Aucune réservation pour le moment",
+  "noReservationsDesc": "Vos réservations apparaîtront ici après une réservation.",
+  "billboard": "Panneau",
+  "type": "Type",
+  "size": "Taille",
+  "startDate": "Date de début",
+  "endDate": "Date de fin",
+  "price": "Prix",
+  "status": "Statut",
+  "action": "Action",
+  "cancel": "Annuler",
+  "pdf": "PDF",
+  "loadError": "Impossible de charger vos réservations pour le moment.",
+  "generatingPdf": "Génération de votre PDF...",
+  "invalidFile": "Format de fichier invalide",
+  "downloadSuccess": "Téléchargé avec succès",
+  "serverError": "Erreur serveur. Réessayez plus tard.",
+  "areYouSure": "Êtes-vous sûr ?",
+  "cancelWarning": "Vous ne pourrez pas annuler cette action !",
+  "confirmCancel": "Oui, annuler !",
+  "cancelled": "Annulé !",
+  "cancelSuccess": "Votre réservation a été annulée.",
+  "error": "Erreur !",
+  "somethingWrong": "Une erreur s'est produite."
+}
+,
+
+  "reservation": {
+    "loading": "Chargement...",
+    "notFound": "Panneau non trouvé",
+    "backCatalog": "Retour au catalogue",
+    "screen": "Écran",
+    "perMonth": "/mois",
+
+    "steps": {
+      "select": "Sélection",
+      "details": "Détails",
+      "payment": "Paiement",
+      "success": "Succès"
+    },
+
+    "clientDetails": "Informations client",
+    "companyName": "Nom de l’entreprise",
+    "optional": "Optionnel",
+    "phone": "Numéro de téléphone",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "continuePayment": "Continuer vers le paiement",
+
+    "finalize": "Finaliser la réservation",
+    "imageOnly": "Image uniquement",
+    "videoOnly": "Vidéo uniquement",
+    "imageVideo": "Image ou vidéo",
+    "uploadCreative": "Cliquez pour téléverser votre contenu",
+
+    "total": "Total estimé :",
+    "duration": "Durée :",
+    "days": "Jours",
+
+    "back": "Retour",
+    "confirm": "Confirmer",
+
+    "confirmedTitle": "Réservation confirmée !",
+    "confirmedText": "Votre réservation a été envoyée avec succès.",
+    "backHome": "Retour à l’accueil",
+    "downloadReceipt": "Télécharger le reçu",
+
+    "requiredFields": "Veuillez remplir tous les champs obligatoires",
+    "uploadRequired": "Veuillez téléverser votre design",
+    "submissionFailed": "Échec de l’envoi",
+    "uploadText": "Téléchargez votre contenu publicitaire"
+  },
+
+  
+  "billboards": {
+    "title": "Espaces publicitaires",
+    "subtitle": "Trouvez l’emplacement publicitaire idéal au Maroc.",
+    "cityLocation": "VILLE",
+    "zone": "ZONE",
+    "panelType": "TYPE DE PANNEAU",
+    "size": "TAILLE",
+    "priceRange": "PRIX",
+
+    "allCities": "Toutes les villes",
+    "allZones": "Toutes les zones",
+    "allTypes": "Tous les types",
+    "allSizes": "Toutes les tailles",
+
+    "classic": "Panneau classique",
+    "digital": "Écran digital",
+    "led": "Mur LED",
+
+    "small": "Petit",
+    "medium": "Moyen",
+    "large": "Grand",
+
+    "loading": "Chargement...",
+    "viewDetails": "Voir détails",
+    "booked": "Réservé",
+    "viewAll": "Voir plus",
+    "noResults": "Aucun panneau trouvé.",
+    "loginFirst": "Connectez-vous d'abord",
+
+    "available": "Disponible",
+    "unavailable": "Indisponible",
+    "highDemand": "Forte demande",
+
+    "perMonth": "/mois"
+  }
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "dashboard": {
+    "common": {
+      "admin": "Admin",
+      "adminPanel": "Panneau admin",
+      "areYouSure": "Etes-vous sur ?",
+      "back": "Retour",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "deleteConfirm": "Oui, supprimer",
+      "deleted": "Supprime !",
+      "error": "Erreur",
+      "language": "Langue",
+      "logout": "Deconnexion",
+      "missingInfo": "Informations manquantes",
+      "next": "Suivant",
+      "noData": "Aucune donnee disponible",
+      "of": "sur",
+      "page": "Page",
+      "previous": "Precedent",
+      "saved": "Enregistre",
+      "saving": "Enregistrement...",
+      "somethingWrong": "Une erreur s'est produite.",
+      "unknown": "Inconnu",
+      "update": "Modifier",
+      "updated": "Mis a jour !",
+      "viewAll": "Voir tout"
+    },
+    "languages": {
+      "english": "Anglais",
+      "french": "Francais",
+      "arabic": "Arabe"
+    },
+    "status": {
+      "available": "Disponible",
+      "cancelled": "Annule",
+      "confirmed": "Confirme",
+      "pending": "En attente",
+      "rejected": "Rejete",
+      "unavailable": "Indisponible"
+    },
+    "roles": {
+      "admin": "Admin",
+      "client": "Client"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "empty": "Aucune nouvelle mise a jour",
+      "markAllRead": "Tout marquer comme lu",
+      "newReservation": "Nouvelle reservation de {{client}} pour \"{{billboard}}\""
+    },
+    "sidebar": {
+      "openMenu": "Ouvrir le menu",
+      "closeMenu": "Fermer le menu",
+      "dashboard": "Tableau de bord",
+      "billboards": "Panneaux",
+      "reservations": "Reservations",
+      "users": "Utilisateurs",
+      "settings": "Parametres"
+    },
+    "overview": {
+      "title": "Tableau de bord",
+      "addBillboard": "Ajouter un panneau",
+      "stats": {
+        "totalBillboards": "Total des panneaux",
+        "activeReservations": "Reservations actives",
+        "monthlyRevenue": "Revenu mensuel",
+        "totalUsers": "Total utilisateurs"
+      },
+      "charts": {
+        "revenue": "Apercu du revenu mensuel",
+        "types": "Types de panneaux"
+      }
+    },
+    "contacts": {
+      "kicker": "Messages de contact",
+      "title": "Contacts utilisateurs",
+      "search": "Rechercher nom, email, message...",
+      "empty": "Aucun message de contact trouve"
+    },
+    "reservations": {
+      "title": "Reservations",
+      "search": "Rechercher client, ville, type...",
+      "allStatus": "Tous les statuts",
+      "durationDays_one": "{{count}} jour",
+      "durationDays_other": "{{count}} jours",
+      "confirmTitle": "Confirmer la reservation ?",
+      "rejectTitle": "Rejeter la reservation ?",
+      "confirm": "Confirmer",
+      "reject": "Rejeter",
+      "actionFailed": "Action echouee",
+      "noZone": "Aucune zone",
+      "noType": "Aucun type",
+      "table": {
+        "client": "Client",
+        "billboard": "Panneau",
+        "city": "Ville",
+        "startDate": "Date debut",
+        "duration": "Duree",
+        "price": "Prix",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "billboards": {
+      "eyebrow": "Catalogue admin",
+      "addTitle": "Ajouter un nouveau panneau",
+      "updateTitle": "Modifier le panneau",
+      "createHeading": "Creer un panneau",
+      "editHeading": "Modifier les details du panneau",
+      "createDescription": "Ajoutez un nouveau panneau au catalogue public.",
+      "editDescription": "Modifiez les informations du panneau selectionne.",
+      "cancelEdit": "Annuler la modification",
+      "saveButton": "Enregistrer le panneau",
+      "updateButton": "Mettre a jour le panneau",
+      "database": "Base de donnees",
+      "manageTitle": "Gerer les panneaux",
+      "manageDescription": "Modifiez ou supprimez les panneaux deja presents dans le catalogue.",
+      "refresh": "Actualiser la liste",
+      "loading": "Chargement des panneaux...",
+      "empty": "Aucun panneau trouve.",
+      "deleteTitle": "Supprimer le panneau ?",
+      "deleteText": "Cela supprimera \"{{title}}\" du catalogue.",
+      "form": {
+        "title": "Titre",
+        "titlePlaceholder": "Titre du panneau",
+        "city": "Ville",
+        "cityPlaceholder": "Nom de la ville",
+        "zone": "Zone / Emplacement",
+        "zonePlaceholder": "Nom de la zone",
+        "type": "Type",
+        "size": "Taille",
+        "sizePlaceholder": "Taille du panneau",
+        "price": "Prix (MAD)",
+        "pricePlaceholder": "Prix du panneau",
+        "availability": "Disponibilite",
+        "image": "Image du panneau",
+        "upload": "Cliquez pour choisir une image",
+        "currentFile": "Actuel"
+      },
+      "types": {
+        "classic": "Classique",
+        "digital": "Digital"
+      },
+      "messages": {
+        "loadError": "Impossible de charger les panneaux",
+        "imageRequired": "Veuillez choisir une image du panneau",
+        "added": "Panneau ajoute avec succes !",
+        "updated": "Panneau mis a jour avec succes !",
+        "deleted": "Panneau supprime avec succes !",
+        "deleteError": "Impossible de supprimer le panneau"
+      }
+    },
+    "users": {
+      "title": "Gestion des utilisateurs",
+      "search": "Rechercher par nom ou email...",
+      "totalUsers": "Total utilisateurs",
+      "admins": "Admins",
+      "editRole": "Modifier le role",
+      "editRoleTitle": "Modifier le role utilisateur",
+      "editRoleText": "Choisissez un nouveau role pour {{name}}",
+      "updateRole": "Mettre a jour le role",
+      "chooseRole": "Veuillez choisir un role",
+      "roleUpdated": "Le role utilisateur a ete mis a jour.",
+      "deleteWarning": "Vous ne pourrez pas annuler cette action !",
+      "deleted": "L'utilisateur a ete supprime.",
+      "table": {
+        "user": "Utilisateur",
+        "email": "Email",
+        "role": "Role",
+        "actions": "Actions"
+      }
+    },
+    "settings": {
+      "title": "Parametres",
+      "subtitle": "Gerez votre profil admin, la securite et les preferences du tableau de bord.",
+      "signedInAs": "Connecte en tant que",
+      "unavailable": "Parametres indisponibles",
+      "loadError": "Impossible de charger les parametres admin.",
+      "nameEmailRequired": "Le nom et l'email sont obligatoires.",
+      "profileSaved": "Profil admin mis a jour avec succes.",
+      "profileNotSaved": "Profil non enregistre",
+      "profileCheck": "Veuillez verifier les informations du profil.",
+      "fillPassword": "Remplissez d'abord les champs du mot de passe.",
+      "weakPassword": "Mot de passe faible",
+      "passwordLength": "Le nouveau mot de passe doit contenir au moins 6 caracteres.",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordMismatchText": "Le nouveau mot de passe et la confirmation ne correspondent pas.",
+      "passwordSaved": "Mot de passe mis a jour avec succes.",
+      "passwordNotChanged": "Mot de passe non modifie",
+      "verifyPassword": "Veuillez verifier votre mot de passe actuel.",
+      "preferencesSaved": "Preferences du tableau de bord mises a jour.",
+      "preferencesNotSaved": "Preferences non enregistrees",
+      "preferencesError": "Impossible d'enregistrer les preferences.",
+      "logoutTitle": "Se deconnecter ?",
+      "logoutText": "Vous devrez vous reconnecter pour acceder au tableau de bord admin.",
+      "health": {
+        "adminAccess": "Acces admin",
+        "protectedRoute": "Route protegee active",
+        "timezone": "Fuseau horaire",
+        "databaseSync": "Synchronisation",
+        "preferencesSaved": "Preferences enregistrees sur votre compte admin"
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Gardez les informations du compte claires et visibles.",
+        "fullName": "Nom complet",
+        "email": "Adresse email",
+        "phone": "Numero de telephone",
+        "role": "Role",
+        "save": "Enregistrer le profil"
+      },
+      "security": {
+        "title": "Securite",
+        "description": "Changez votre mot de passe depuis le tableau de bord admin.",
+        "currentPassword": "Mot de passe actuel",
+        "newPassword": "Nouveau mot de passe",
+        "confirmPassword": "Confirmer le nouveau mot de passe",
+        "change": "Changer le mot de passe"
+      },
+      "preferences": {
+        "title": "Preferences du tableau de bord",
+        "description": "Controlez les alertes, rapports, langue et contexte d'affichage.",
+        "emailNotifications": "Notifications email",
+        "emailNotificationsDesc": "Recevez les mises a jour importantes par email.",
+        "reservationAlerts": "Alertes de reservation",
+        "reservationAlertsDesc": "Mettez en avant les nouvelles demandes de reservation.",
+        "weeklyReports": "Rapports hebdomadaires",
+        "weeklyReportsDesc": "Resumes des revenus, clients et panneaux.",
+        "timezone": "Fuseau horaire",
+        "save": "Enregistrer les preferences"
+      }
+    }
+  },
+
+  "footer": {
+    "description": "Les meilleures solutions publicitaires au Maroc pour développer votre marque.",
+    "links_title": "Liens rapides",
+    "links": {
+      "home": "Accueil",
+      "contact": "Contact",
+      "login": "Connexion"
+    },
+    "contact_title": "Contact",
+    "address": "Dar Bouazza, Casablanca",
+    "copyright": "© 2026 AtlasAds. Créé par Ismail."
+  }
+
+}

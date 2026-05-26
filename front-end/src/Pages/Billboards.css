@@ -232,7 +232,7 @@
   margin-left: 4px;
 }
 
-.book-btn {
+.view-btn {
   background: #f97316;
   color: white;
   border: none;
@@ -244,7 +244,7 @@
   text-decoration: none;
 }
 
-.book-btn:hover {
+.view-btn:hover {
   background: #ea580c;
 }
 
@@ -367,11 +367,10 @@
   min-width: 60px;
 }
 
-.book-btn.disabled {
+.view-btn.disabled {
   background-color: #e2e8f0;
   color: #94a3b8;
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 

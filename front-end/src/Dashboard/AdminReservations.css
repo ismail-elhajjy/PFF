@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.admin-reservations-page {
+  max-width: 100%;
+}
+
+.admin-panel {
+  color: #ff7e20;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.admin-header h1 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.admin-section {
+  background: #ffffff;
+  border-radius: 1.1rem;
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.admin-res-card-header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.actions-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.filters-group {
+  display: flex;
+  gap: 12px; 
+}
+
+.btn-view-all {
+  background: transparent;
+  color: #ff7e20;
+  border: 1px solid #ff7e20;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-view-all:hover {
+  background: #ff7e20;
+  color: #fff;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box svg {
+  position: absolute;
+  left: 0.75rem;
+  color: #94a3b8;
+}
+
+.search-box input {
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  width: 250px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+  border-color: #ff7e20;
+}
+
+.status-select {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  font-size: 0.875rem;
+  color: #1e293b;
+  cursor: pointer;
+  outline: none;
+}
+
+.admin-res-table-wrap {
+  width: 100%;
+  overflow-x: auto;  
+}
+
+.admin-res-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-res-table th {
+  background-color: #f8fafc;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.admin-res-table td {
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.admin-res-table tr:hover {
+  background-color: #fff7ed;
+}
+
+.client-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.billboard-title {
+  font-weight: 500;
+  color: #334155;
+}
+
+.price-val {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.status-pill {
+  display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-pill.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-pill.confirmed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.rejected,
+.status-pill.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.row-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.1s,
+    background-color 0.2s;
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+.action-btn.confirm {
+  background-color: #ecfdf5;
+  color: #10b981;
+}
+
+.action-btn.confirm:hover {
+  background-color: #10b981;
+  color: #fff;
+}
+
+.action-btn.reject {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.action-btn.reject:hover {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+/* ========================= */
+/*       Responsive          */
+/* ========================= */
+@media (max-width: 1024px) {
+
+  .admin-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .admin-res-card-header {
+    padding: 1rem;
+  }
+
+  .actions-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .filters-group {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .search-box input {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .admin-reservations-page {
+    padding: 0;
+  }
+
+  .admin-header h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .admin-section {
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  /* header */
+  .admin-res-card-header {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions-area {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  /* filters */
+  .filters-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .status-select {
+    width: 100%;
+  }
+
+  .btn-view-all {
+    width: 100%;
+    text-align: center;
+  }
+
+ 
+  /* custom scrollbar */
+  .admin-res-table-wrap::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .admin-res-table-wrap::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+  }
+
+ 
+ 
+  .row-actions {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ========================= */
+/* MOBILE -> TABLE => CARDS */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .admin-reservations-page {
+    padding: 0;
+  }
+
+  .admin-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* filters */
+  .admin-res-card-header {
+    padding: 1rem;
+  }
+
+  .actions-area {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filters-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-box,
+  .search-box input,
+  .status-select,
+  .btn-view-all {
+    width: 100%;
+  }
+
+  /* hide table header */
+  .admin-res-table thead {
+    display: none;
+  }
+
+  .admin-res-table,
+  .admin-res-table tbody,
+  .admin-res-table tr,
+  .admin-res-table td {
+    display: block;
+    width: 100%;
+  }
+
+  /* remove horizontal scroll */
+  .admin-res-table-wrap {
+    overflow: visible;
+    padding: 12px;
+  }
+
+  /* each row => card */
+  .admin-res-table tr {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+
+  .admin-res-table tr:hover {
+    background: white;
+  }
+
+  /* each td line */
+  .admin-res-table td {
+    border: none;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  /* labels before values */
+  .admin-res-table td::before {
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .admin-res-table td:nth-child(1)::before {
+    content: "Client";
+  }
+
+  .admin-res-table td:nth-child(2)::before {
+    content: "Billboard";
+  }
+
+  .admin-res-table td:nth-child(3)::before {
+    content: "City";
+  }
+
+  .admin-res-table td:nth-child(4)::before {
+    content: "Start Date";
+  }
+
+  .admin-res-table td:nth-child(5)::before {
+    content: "Duration";
+  }
+
+  .admin-res-table td:nth-child(6)::before {
+    content: "Price";
+  }
+
+  .admin-res-table td:nth-child(7)::before {
+    content: "Status";
+  }
+
+  .admin-res-table td:nth-child(8)::before {
+    content: "Actions";
+  }
+
+  /* actions buttons */
+  .row-actions {
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .action-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* ========================= */
+/* MOBILE -> TABLE TO CARDS */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .admin-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-res-card-header {
+    padding: 1rem;
+  }
+
+  .actions-area {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filters-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-box,
+  .search-box input,
+  .status-select,
+  .btn-view-all {
+    width: 100%;
+  }
+
+  .admin-res-table-wrap {
+    overflow: visible;
+    padding: 12px;
+  }
+
+  /* hide header */
+  .admin-res-table thead {
+    display: none;
+  }
+
+  .admin-res-table,
+  .admin-res-table tbody,
+  .admin-res-table tr,
+  .admin-res-table td {
+    display: block;
+    width: 100%;
+  }
+
+  /* card style */
+  .admin-res-table tr {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  .admin-res-table tr:hover {
+    background: white;
+  }
+
+  /* each row field */
+  .admin-res-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border: none;
+    text-align: right;
+    white-space: normal;
+  }
+
+  /* dynamic labels */
+  .admin-res-table td::before {
+    content: attr(data-label);
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .row-actions {
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .action-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+

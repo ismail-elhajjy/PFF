@@ -4,8 +4,11 @@ import "./Login.css";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Login = () => {
+  const { t } = useTranslation();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -23,20 +26,33 @@ const Login = () => {
         password,
       });
 
-      localStorage.setItem("token", response.data.token);
-      navigate("/");
-    } catch (err) {
-      if (!err.response) {
-        setError(" Problem connecting to the server. Please try again later.");
+      const { token, user } = response.data;
 
-      } else if (err.response.status === 401) {
-        setError(" Incorrect email or password. Please check and try again.");
+      // 1. Storage: تسجيل التوكن والمعلومات الأساسية
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("role", user.role); // مهمة بزاف للـ ProtectedRoute
 
-      } else if (err.response.status === 422) {
-        setError(" Please provide a valid email and password.");
-        
+      // 2. Conditional Routing: توجيه المستخدم حسب الـ Role
+      if (user.role === "admin") {
+        navigate("/admin/dashboard");
       } else {
-        setError(" Something went wrong. Please try again later.");
+        navigate("/");
+      }
+
+      // 3. Sync: تحديث حالة الـ App
+      window.location.reload();
+    } catch (err) {
+      // Handling errors based on status codes we defined in Laravel
+      if (!err.response) {
+        setError(t("login.errors.server"));
+      } else if (err.response.status === 403) {
+        // هادي هي الحالة فاش كيكون User ماشي Admin وباغي يدخل
+        setError(err.response.data.message || "Access denied: Admins only.");
+      } else if (err.response.status === 401) {
+        setError(t("login.errors.invalidCredentials"));
+      } else {
+        setError(t("login.errors.general"));
       }
     } finally {
       setLoading(false);
@@ -55,15 +71,13 @@ const Login = () => {
 
         <div className="welcome-content">
           <h1>
-            Welcome back to <span>AtlasAds</span>
+            {t("login.left.title")} <span>AtlasAds</span>
           </h1>
-          <p>
-            Sign in to manage your billboard reservations and campaigns across
-            Morocco.
-          </p>
+
+          <p>{t("login.left.subtitle")}</p>
         </div>
 
-        <div className="footer-text">© 2026 AtlasAds. All rights reserved.</div>
+        <div className="footer-text">{t("login.left.footer")}</div>
       </div>
 
       {/**************************/}
@@ -71,10 +85,9 @@ const Login = () => {
       {/**************************/}
       <div className="login-right-side">
         <div className="login-card">
-          <h2>Sign In</h2>
-          <p className="subtitle">
-            Enter your credentials to access your account
-          </p>
+          <h2>{t("login.right.title")}</h2>
+
+          <p className="subtitle">{t("login.right.subtitle")}</p>
 
           {error && (
             <div className="error-msg">
@@ -87,7 +100,8 @@ const Login = () => {
           {/***************/}
           <form onSubmit={handleLogin}>
             <div className="form-group">
-              <label>Email Address</label>
+              <label>{t("login.form.email")}</label>
+
               <input
                 type="email"
                 className="input"
@@ -99,7 +113,8 @@ const Login = () => {
             </div>
 
             <div className="form-group">
-              <label>Password</label>
+              <label>{t("login.form.password")}</label>
+
               <input
                 type="password"
                 className="input"
@@ -111,7 +126,7 @@ const Login = () => {
             </div>
 
             <button type="submit" className="login-btn" disabled={loading}>
-              {loading ? "Signing in..." : "Sign In"}
+              {loading ? t("login.form.loadingBtn") : t("login.form.loginBtn")}
             </button>
           </form>
 
@@ -119,9 +134,10 @@ const Login = () => {
           {/* Register Link */}
           {/*****************/}
           <div className="register-container">
-            Don't have an account?
+            {t("login.register.text")}
+
             <Link to="/register" className="register-link">
-              Register here
+              {t("login.register.link")}
             </Link>
           </div>
 
@@ -129,7 +145,8 @@ const Login = () => {
           {/* Back Home Link */}
           {/******************/}
           <Link to="/" className="back-home">
-            <ArrowLeft size={20} strokeWidth={3}/><span> Back to Home</span>
+            <ArrowLeft size={20} strokeWidth={3} />
+            <span>{t("login.backHome")}</span>
           </Link>
         </div>
       </div>

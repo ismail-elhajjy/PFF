@@ -1,6 +1,7 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import CitiesData from "../Data/CitiesData";
 import Testimonials from "../Data/Testimonials";
 import mainImg from "../assets/main-img44.png";
@@ -16,6 +17,8 @@ import {
 } from "lucide-react";
 
 function Home() {
+  const { t } = useTranslation();
+
   // for smooth scroll into cities section
   const citiesSectionRef = useRef(null);
   const scrollToCities = () => {
@@ -29,6 +32,7 @@ function Home() {
       {/* ============================= */}
       {/*         Header Section        */}
       {/* ============================= */}
+      
       <section className="hero-section">
         <div className="hero-container">
           {/* ============================= */}
@@ -36,21 +40,17 @@ function Home() {
           {/* ============================= */}
           <div className="hero-text-content">
             <h1>
-              Your Growth Starts with
+              {t("home.hero.title_part1")}
               <br />
               <span className="orange-text">AtlasAds</span>
             </h1>
-            <p>
-              The ultimate platform to manage, track, and showcase your
-              billboard campaigns with precision and style. Elevate your brand
-              today.
-            </p>
+            <p>{t("home.hero.description")}</p>
             <div className="hero-btns">
               <Link to="/billboards" className="btn-primary">
-                Reserve a Panel
+                {t("home.hero.btn_reserve")}
               </Link>
               <button className="btn-secondary" onClick={scrollToCities}>
-                Explore Billboards 
+                {t("home.hero.btn_explore")}
               </button>
             </div>
           </div>
@@ -67,15 +67,15 @@ function Home() {
             />
 
             {/* ========================= */}
-            {/*      Location Card        */}
+            {/*       Location Card        */}
             {/* ========================= */}
             <div className="floating-location">
               <div className="pin-icon">
                 <MapPin size={28} strokeWidth={2} />
               </div>
               <div className="info-text">
-                <strong>Boulevard Mohammed V</strong>
-                <span>Zone Premium</span>
+                <strong>{t("home.hero.floating_location")}</strong>
+                <span>{t("home.hero.floating_zone")}</span>
               </div>
             </div>
           </div>
@@ -86,11 +86,11 @@ function Home() {
       {/*      How It Works Section     */}
       {/* ============================= */}
       <section className="how-it-works">
-        <h2>How It <span> Works</span></h2>
-        <p>
-          Reserve your billboard space in just three simple steps. No
-          complicated processes, no hidden fees.
-        </p>
+        <h2>
+          {t("home.how_it_works.title_part1")}{" "}
+          <span> {t("home.how_it_works.title_part2")}</span>
+        </h2>
+        <p>{t("home.how_it_works.description")}</p>
         <div className="container-cards">
           <div className="card">
             <div className="card-top">
@@ -99,11 +99,8 @@ function Home() {
               </div>
               <span className="step-number">01</span>
             </div>
-            <h5>Choose a City</h5>
-            <p>
-              Select from major cities across Morocco where you want your brand
-              to be seen.
-            </p>
+            <h5>{t("home.how_it_works.step1_title")}</h5>
+            <p>{t("home.how_it_works.step1_desc")}</p>
           </div>
 
           <div className="card">
@@ -114,11 +111,8 @@ function Home() {
               <span className="step-number">02</span>
             </div>
 
-            <h5>Select Zone & Billboard</h5>
-            <p>
-              Browse strategic zones and pick the perfect billboard for your
-              campaign.
-            </p>
+            <h5>{t("home.how_it_works.step2_title")}</h5>
+            <p>{t("home.how_it_works.step2_desc")}</p>
           </div>
 
           <div className="card">
@@ -128,27 +122,25 @@ function Home() {
               </div>
               <span className="step-number">03</span>
             </div>
-            <h5>Send Reservation Request</h5>
-            <p>
-              Submit your request and our team will contact you to finalize the
-              booking.
-            </p>
+            <h5>{t("home.how_it_works.step3_title")}</h5>
+            <p>{t("home.how_it_works.step3_desc")}</p>
           </div>
         </div>
       </section>
 
       {/* ============================= */}
-      {/*        Cities Section         */}
+      {/*         Cities Section         */}
       {/* ============================= */}
       <section className="cities-section" ref={citiesSectionRef}>
         <div className="cities-header">
           <div className="cities-title">
-            <h2>Featured Cities</h2>
-            <p>Explore premium locations in Morocco's economic hubs.</p>
+            <h2>{t("home.cities.title")}</h2>
+            <p>{t("home.cities.description")}</p>
           </div>
 
           <Link to="/billboards" className="view-all">
-            View all <span>Cities</span>
+            {t("home.cities.view_all")}{" "}
+            <span>{t("home.cities.cities_span")}</span>
             <ArrowRight size={20} strokeWidth={3} />
           </Link>
         </div>
@@ -167,16 +159,15 @@ function Home() {
       </section>
 
       {/* ============================= */}
-      {/*       Features Section        */}
+      {/*        Features Section        */}
       {/* ============================= */}
       <section className="features-section">
         <div className="section-title">
           <h2>
-            Why Choose <span className="orange-text">AtlasAds?</span>
+            {t("home.features.title_part1")}{" "}
+            <span className="orange-text">AtlasAds?</span>
           </h2>
-          <p className="section-subtitle">
-            The complete platform for outdoor advertising in Morocco.
-          </p>
+          <p className="section-subtitle">{t("home.features.subtitle")}</p>
         </div>
 
         <div className="features-grid">
@@ -184,32 +175,30 @@ function Home() {
             <div className="icon-wrapper">
               <BarChart3 size={32} strokeWidth={2} />
             </div>
-            <h3>Real-time Stats</h3>
-            <p>
-              Track your billboard performance with live data and smart charts.
-            </p>
+            <h3>{t("home.features.feat1_title")}</h3>
+            <p>{t("home.features.feat1_desc")}</p>
           </div>
 
           <div className="feature-card">
             <div className="icon-wrapper">
               <Globe size={32} strokeWidth={2} />
             </div>
-            <h3>Wide Coverage</h3>
-            <p>Access the best locations across the country for your brand.</p>
+            <h3>{t("home.features.feat2_title")}</h3>
+            <p>{t("home.features.feat2_desc")}</p>
           </div>
 
           <div className="feature-card">
             <div className="icon-wrapper">
               <ShieldCheck size={32} strokeWidth={2} />
             </div>
-            <h3>Secure Management</h3>
-            <p>Your campaigns are protected with our high-security system.</p>
+            <h3>{t("home.features.feat3_title")}</h3>
+            <p>{t("home.features.feat3_desc")}</p>
           </div>
         </div>
       </section>
 
       {/* ============================= */}
-      {/*     Testimonials Section      */}
+      {/*      Testimonials Section      */}
       {/* ============================= */}
 
       <section className="testimonials-section">
@@ -218,13 +207,13 @@ function Home() {
           {/*     Testimonials Header     */}
           {/* =========================== */}
           <div className="testimonials-header">
-            <span className="badge">CLIENT TESTIMONIALS</span>
+            <span className="badge">{t("home.testimonials.badge")}</span>
             <h2>
-              They <span>trust</span> us
+              {t("home.testimonials.title_part1")}{" "}
+              <span>{t("home.testimonials.title_part2")}</span>{" "}
+              {t("home.testimonials.title_part3")}
             </h2>
-            <p>
-              Moroccan companies that boosted their visibility with AtlasAds
-            </p>
+            <p>{t("home.testimonials.subtitle")}</p>
           </div>
           <div className="testimonials-grid">
             {Testimonials.map((t) => (
@@ -245,56 +234,53 @@ function Home() {
           </div>
 
           {/* =========================== */}
-          {/*        Stats Section        */}
+          {/*         Stats Section        */}
           {/* =========================== */}
           <div className="stats-container">
             <div className="stat-card">
               <h3>500+</h3>
-              <p>Available Billboards</p>
+              <p>{t("home.stats.billboards")}</p>
             </div>
             <div className="stat-card">
               <h3>8</h3>
-              <p>Cities Covered</p>
+              <p>{t("home.stats.cities")}</p>
             </div>
             <div className="stat-card">
               <h3>98%</h3>
-              <p>Satisfied Clients</p>
+              <p>{t("home.stats.satisfied")}</p>
             </div>
             <div className="stat-card">
               <h3>200+</h3>
-              <p>Campaigns Realized</p>
+              <p>{t("home.stats.campaigns")}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ============================= */}
-      {/*         CTA Section           */}
+      {/*          CTA Section           */}
       {/* ============================= */}
       <section className="cta-section">
         <div className="cta-container">
           <div className="cta-content">
             <h2>
-              Ready to boost your <span>brand visibility?</span>
+              {t("home.cta.title_part1")}{" "}
+              <span>{t("home.cta.title_part2")}</span>
             </h2>
-            <p>
-              Join hundreds of Moroccan businesses and start your outdoor
-              advertising campaign today with AtlasAds.
-            </p>
+            <p>{t("home.cta.description")}</p>
 
             <div className="cta-buttons">
               <Link to="/billboards" className="start-btn">
-                Start Your Campaign Now
+                {t("home.cta.btn_start")}
               </Link>
 
               <Link to="/contact" className="contact-btn">
-                Contact Sales
+                {t("home.cta.btn_contact")}
               </Link>
             </div>
           </div>
 
           <div className="cta-decoration">
-            {/* هاد الدائرة كتعطي جمالية بلا ما تزحم العين */}
             <div className="glow-circle"></div>
           </div>
         </div>

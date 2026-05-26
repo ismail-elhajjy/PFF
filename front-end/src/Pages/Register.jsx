@@ -4,9 +4,11 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
 import { ArrowLeft } from "lucide-react";
-
+import { useTranslation } from "react-i18next";
 
 function Register() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,7 +36,9 @@ function Register() {
       .post("http://127.0.0.1:8000/api/register", formData)
       .then((res) => {
         console.log(res.data);
-        setSuccessMsg("Account created! Redirecting to login...");
+
+        setSuccessMsg(t("register.success"));
+
         setTimeout(() => {
           setLoading(false);
           navigate("/login");
@@ -42,6 +46,7 @@ function Register() {
       })
       .catch((err) => {
         setLoading(false);
+
         if (err.response && err.response.status === 422) {
           setErrors(err.response.data.errors);
         }
@@ -57,14 +62,14 @@ function Register() {
         <div className="box-logo">
           <img src={MainLogo} alt="AtlasAds Logo" className="main-logo" />
         </div>
+
         <h1>
-          Join <span className="title">AtlasAds</span>
+          {t("register.join")} <span className="title">AtlasAds</span>
         </h1>
-        <p className="desc">
-          Create an account to manage your billboard reservations and campaigns
-          across Morocco.
-        </p>
-        <div className="footer">© 2026 AtlasAds. All rights reserved.</div>
+
+        <p className="desc">{t("register.desc")}</p>
+
+        <div className="footer">{t("register.footer")}</div>
       </div>
 
       {/*******************/}
@@ -72,28 +77,35 @@ function Register() {
       {/*******************/}
       <div className="right-panel">
         <div className="form-container">
-          <h2>Sign Up</h2>
-          <p className="subtitle">Enter your details to create your account</p>
+          <h2>{t("register.signUp")}</h2>
+
+          <p className="subtitle">{t("register.subtitle")}</p>
+
           {successMsg && <div className="success-banner">{successMsg}</div>}
 
           <form onSubmit={submit}>
+            {/* Full Name */}
             <div className="input-group">
-              <label>Full Name</label>
+              <label>{t("register.fullName")}</label>
+
               <input
                 type="text"
                 name="name"
-                placeholder="Full Name"
+                placeholder={t("register.fullName")}
                 value={formData.name}
                 onChange={handleChange}
                 required
               />
+
               {errors.name && (
                 <span className="error-msg">{errors.name[0]}</span>
               )}
             </div>
 
+            {/* Email */}
             <div className="input-group">
-              <label>Email Address</label>
+              <label>{t("register.email")}</label>
+
               <input
                 type="email"
                 name="email"
@@ -102,13 +114,16 @@ function Register() {
                 onChange={handleChange}
                 required
               />
+
               {errors.email && (
                 <span className="error-msg">{errors.email[0]}</span>
               )}
             </div>
 
+            {/* Password */}
             <div className="input-group">
-              <label>Password</label>
+              <label>{t("register.password")}</label>
+
               <input
                 type="password"
                 name="password"
@@ -117,13 +132,16 @@ function Register() {
                 onChange={handleChange}
                 required
               />
+
               {errors.password && (
                 <span className="error-msg">{errors.password[0]}</span>
               )}
             </div>
 
+            {/* Confirm Password */}
             <div className="input-group">
-              <label>Confirm Password</label>
+              <label>{t("register.confirmPassword")}</label>
+
               <input
                 type="password"
                 name="password_confirmation"
@@ -135,19 +153,21 @@ function Register() {
             </div>
 
             <button type="submit" className="submit-btn" disabled={loading}>
-              {loading ? "Signing up..." : "Sign Up"}
+              {loading ? t("register.signingUp") : t("register.signUp")}
             </button>
           </form>
 
           <div className="links">
             <p>
-              Already have an account?{" "}
+              {t("register.haveAccount")}{" "}
               <span onClick={() => navigate("/login")} className="link-text">
-                Login here
+                {t("register.loginHere")}
               </span>
             </p>
+
             <Link to="/" className="back-home">
-              <ArrowLeft size={20} strokeWidth={3}/><span> Back to Home</span>
+              <ArrowLeft size={20} strokeWidth={3} />
+              <span>{t("register.backHome")}</span>
             </Link>
           </div>
         </div>

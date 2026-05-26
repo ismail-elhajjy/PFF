@@ -2,8 +2,11 @@ import { useState } from "react";
 import axios from "axios";
 import "./Contact.css";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
@@ -18,87 +21,101 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus({ type: "loading", msg: "Sending your message..." });
+
+    setStatus({
+      type: "loading",
+      msg: t("contact.status.sending"),
+    });
 
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/contact",
-        formData,
+        formData
       );
+
       if (response.status === 201) {
         setStatus({
           type: "success",
-          msg: "Thank you! Your message has been sent successfully.",
+          msg: t("contact.status.success"),
         });
-        setFormData({ fullname: "", email: "", message: "" });
 
-        setTimeout(() => setStatus({ type: "", msg: "" }), 5000);
+        setFormData({
+          fullname: "",
+          email: "",
+          message: "",
+        });
+
+        setTimeout(() => {
+          setStatus({ type: "", msg: "" });
+        }, 5000);
       }
     } catch (error) {
       console.error("Error:", error);
+
       setStatus({
         type: "error",
-        msg: "Connection error. Please try again later.",
+        msg: t("contact.status.error"),
       });
     }
   };
 
   return (
     <div className="contact-wrapper">
-        {/*****************************/}
-        {/*  Section 1: Contact Info  */}
-        {/*****************************/}
-
       <div className="contact-container">
+        
+        {/* Contact Info */}
         <div className="contact-info">
-          <h2>Get in Touch</h2>
-          <p>
-            Have questions about our billboards? Our team is here to help you
-            grow your brand.
-          </p>
+          <h2>{t("contact.title")}</h2>
+
+          <p>{t("contact.subtitle")}</p>
+
           <div className="info-details">
             <div className="info-item">
               <span>
                 <MapPin size={25} strokeWidth={2} />
               </span>
               <div>
-                <strong>Headquarters</strong>
-                <p>Dar Bouazza, Casablanca, Morocco</p>
+                <strong>{t("contact.info.headquarters")}</strong>
+                <p>{t("contact.info.location")}</p>
               </div>
             </div>
+
             <div className="info-item">
               <span>
                 <Phone size={25} strokeWidth={2} />
               </span>
               <div>
-                <strong>Phone</strong>
+                <strong>{t("contact.info.phone")}</strong>
                 <p>+212 7 09 08 32 72</p>
               </div>
             </div>
+
             <div className="info-item">
               <span>
                 <Mail size={25} strokeWidth={2} />
               </span>
               <div>
-                <strong>Email</strong>
+                <strong>{t("contact.info.email")}</strong>
                 <p>support@atlasads.ma</p>
               </div>
             </div>
           </div>
         </div>
-        {/*****************************/}
-        {/*  Section 2: Contact Form  */}
-        {/*****************************/}
-        
+
+        {/* Contact Form */}
         <div className="contact-form-section">
           <form className="pro-form" onSubmit={handleSubmit}>
+            
             <div className="input-group">
-              <label htmlFor="fullname">Full Name</label>
+              <label htmlFor="fullname">
+                {t("contact.form.fullname")}
+              </label>
+
               <input
                 type="text"
                 id="fullname"
                 name="fullname"
-                placeholder="Enter your full name"
+                placeholder={t("contact.form.fullnamePlaceholder")}
                 value={formData.fullname}
                 onChange={handleChange}
                 required
@@ -106,7 +123,10 @@ function Contact() {
             </div>
 
             <div className="input-group">
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="email">
+                {t("contact.form.email")}
+              </label>
+
               <input
                 type="email"
                 id="email"
@@ -119,11 +139,14 @@ function Contact() {
             </div>
 
             <div className="input-group">
-              <label htmlFor="message">Your Message</label>
+              <label htmlFor="message">
+                {t("contact.form.message")}
+              </label>
+
               <textarea
                 id="message"
                 name="message"
-                placeholder="How can we assist you today?"
+                placeholder={t("contact.form.messagePlaceholder")}
                 rows="5"
                 value={formData.message}
                 onChange={handleChange}
@@ -137,8 +160,11 @@ function Contact() {
               className="submit-button"
               disabled={status.type === "loading"}
             >
-              {status.type === "loading" ? "Sending..." : "Send Message"}
+              {status.type === "loading"
+                ? t("contact.form.sendingBtn")
+                : t("contact.form.sendBtn")}
             </button>
+
             {status.msg && (
               <div className={`form-status-msg ${status.type}`}>
                 {status.msg}
